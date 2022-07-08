@@ -10,3 +10,9 @@ console.log(prenom); // "Mathys"
 // On réassigne à la variable prénom la valeur "Bob"
 prenom = "Bob";
 console.log(prenom); // "Bob"
+
+let booleanValue = true;
+console.log(typeof booleanValue); // Boolean
+console.log(typeof booleanValue); // boolean
+console.log(typeof "Mathys"); // string
+console.log(typeof 25); // number

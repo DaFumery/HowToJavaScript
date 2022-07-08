@@ -76,9 +76,6 @@ let PI = 3.1415;
 
 ### Différences entre un Objects et une Primitive
 
-**JavaScript a un typage dynamique** : nous n'avons pas à définir manuellement le type de données de la valeur stockée dans une variable.
-Au lieu de cela, les types de données sont déterminés automatiquement.
-
 Une valeur peut être de deux catégories:
 
 - **Object**
@@ -101,16 +98,32 @@ let age = 25;
 
 ### Les 7 données **Primitive**
 
-- **Number**: Nombres à virgule.
+- **Number**: Nombre entier ou décimal.
   > Pour les entiers et les décimaux.
-- **String**: Sequence de caractères.
+- **String**: Séquence de caractères.
   > Pour le texte.
 - **Booléen**: Type logique de valeur True ou False
   > Pour la prise de décision
-- **Undefined**: Variable déclarée mais sans valeur (valeur vide)
-- **Null**:Valeur d'affectation qui signie "Pas de Valeur". Il est du type Object.
+- **Undefined**: Variable déclarée mais sans valeur (valeur vide).
+- **Null**: Valeur d'affectation qui signie "Pas de Valeur". Il est du type Object.
 - **Symbol**: Valeur unique qui ne peut être changée.
-- **BigInt**:Contient un entier plus large que ce que peut contenir **Number**
+- **BigInt**: Contient un entier plus large que ce que peut contenir **Number**.
+
+**JavaScript a un typage dynamique** : nous n'avons pas à définir manuellement le type de données de la valeur stockée dans une variable.
+Au lieu de cela, **les types de données sont déterminés automatiquement**.
+
+### TypeOf
+
+Pour connaître le type de donnée d'une valeur on utilise le keyword:
+
+> typeof
+
+```js
+let booleanValue = true;
+console.log(typeof booleanValue); // boolean
+console.log(typeof 25); // number
+console.log(typeof "Mathys"); // string
+```
 
 ## let, const and var
 
@@ -135,6 +148,10 @@ let age = 25;
 ## La Condition Switch
 
 ## Les Opérateurs Ternaires
+
+```
+
+```
 
 ```
 
