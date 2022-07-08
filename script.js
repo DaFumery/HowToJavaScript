@@ -18,12 +18,6 @@ console.log(typeof "Mathys"); // string
 console.log(typeof 25); // number
 
 ////////////////
-
-const tanyDrej0 = {
-  prenom: "Mathys",
-  dog: {
-    nom: "Chaussette",
-  },
-};
-
-console.log(tanyDrej0["dog"]["nom"]);
+let estCeLheureDuGouter = 419;
+++estCeLheureDuGouter;
+console.log(estCeLheureDuGouter); // 420

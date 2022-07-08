@@ -399,24 +399,28 @@ La précédence des opérateurs détermine l'ordre dans lequel les opérateurs s
 
 ### Classement des précédences des opérateurs (du plus haut au plus bas)
 
-- Opérateur de groupement (...)
+#### Niveau 19
+
+- **Opérateur de groupement (...)**
   > L'opérateur de groupement contrôle la précédence de l'évaluation dans les expressions.
 
 ```js
 console.log(1 + 2 * 3); // 1 + 6
 ```
 
-- Appel de fonction … ( … )
+- **Appel de fonction … ( … )**
   > L'appel d'une fonction exécute une fonction avec les paramètres définis.
 
 ```js
 function carré(nombre) {
   return nombre * nombre;
 }
-carré(4);
+console.log(carré(4)); // 16
 ```
 
-- Chaînage optionnel (?.)
+#### Niveau 18
+
+- **Chaînage optionnel (?.)**
   > L'opérateur de chaînage optionnel ?. permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide.
 
 ```js
@@ -431,8 +435,8 @@ const dogNom = tanyDrej0.dog?.nom;
 console.log(dogNom); // Chaussette
 ```
 
-- Accesseurs de propriété en point (… . …)
-  > L'opérateur de chaînage optionnel ?. permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide.
+- **Accesseurs de propriété en point (… . …)**
+  > L'accesseurs de propriété en crochet permet d'accéder aux valeurs d'un objet
 
 ```js
 const tanyDrej0 = {
@@ -442,11 +446,11 @@ const tanyDrej0 = {
   },
 };
 
-console.log(tanyDrej0.dog.nom);
+console.log(tanyDrej0.dog.nom); // Chaussette
 ```
 
-- Accesseurs de propriété en crochet (… [ … ])
-  > L'opérateur de chaînage optionnel ?. permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide.
+- **Accesseurs de propriété en crochet (… [ … ])**
+  > L'accesseurs de propriété en crochet permet d'accéder aux valeurs d'un objet
 
 ```js
 const tanyDrej0 = {
@@ -456,7 +460,200 @@ const tanyDrej0 = {
   },
 };
 
-console.log(tanyDrej0["dog"]["nom"]);
+console.log(tanyDrej0["dog"]["nom"]); // Chaussette
+```
+
+#### Niveau 16
+
+- **Incrémentation suffixe (...++)**
+  > L'opérateur incrémentera la valeur et renverra la valeur avant l'incrément.
+
+```js
+let estCeLheureDuGouter = 419;
+estCeLheureDuGouter++;
+console.log(estCeLheureDuGouter); // 420
+```
+
+- **Décrémentation suffixe (...--)**
+  > L'opérateur décrémentera la valeur et renverra la valeur avant l'incrément.
+
+```js
+let estCeLheureDuGouter = 421;
+estCeLheureDuGouter--;
+console.log(estCeLheureDuGouter); // 420
+```
+
+#### Niveau 15
+
+- **NON logique (!)**
+  > L'opérateur logique NON (!) prend l'opposé logique de la valeur fournie par son opérande. Vrai devient faux et vice versa.
+
+```js
+const a = 3;
+console.log(!(a > 0)); // false
+```
+
+- **Plus unaire (+)**
+  > L'opérateur de plus unaire (+) précède son opérande et évalue son opérande en essayant de le convertir en nombre si ce n'est pas déjà une valeur numérique.
+
+```js
+const x = 1;
+const y = -1;
+
+console.log(+x); // 1
+console.log(+y); // -1
+console.log(+""); // 0
+console.log(+true); // 1
+console.log(+false); // 0
+```
+
+- **Négation unaire (-)**
+  > L'opérateur de négation unaire (-) se place devant son opérande et le transforme en son opposé.
+
+```js
+const x = 1;
+const y = -1;
+
+console.log(-x); // -1
+console.log(-y); // 1
+console.log(-""); // -0
+console.log(-true); // -1
+console.log(-false); // -0;
+```
+
+- **Incrémentation préfixe (++...)**
+  > L'opérateur incrémentera la valeur et renverra la valeur après l'incrément.
+
+```js
+let estCeLheureDuGouter = 419;
+++estCeLheureDuGouter;
+console.log(estCeLheureDuGouter); // 420
+```
+
+- **Décrémentation préfixe (--...)**
+  > L'opérateur décrémentera la valeur et renverra la valeur après l'incrément.
+
+```js
+let estCeLheureDuGouter = 421;
+--estCeLheureDuGouter;
+console.log(estCeLheureDuGouter); // 420
+```
+
+#### Niveau 14
+
+- **Exponentiation (\*\*)**
+  > L'opérateur d'exponentiation (\*\*) fournit le résultat obtenu lorsqu'on élève le premier opérande à la puissance indiquée par le second.
+
+```js
+console.log(3 ** 4); // 81
+```
+
+#### Niveau 13
+
+- **Multiplication (\*)**
+  > L'opérateur de multiplication (\*) fournit le produit de la multiplication des deux opérandes.
+
+```js
+console.log(3 * 4); // 12
+```
+
+- **Division (/)**
+  > L'opérateur de division (/) fournit le quotient de l'opérande gauche (le numérateur) divisé par l'opérande droite (le dénominateur).
+
+```js
+console.log(3 / 2); // 1.5
+```
+
+- **Reste (%)**
+  > L'opérateur du reste (%) renvoie le reste de la division de l'opérande gauche par l'opérande droit. Le résultat a toujours le signe du numérateur.
+
+```js
+console.log(13 % 5); // 3
+```
+
+#### Niveau 12
+
+- **Addition (+)**
+  > L'opérateur d'addition (+) produit la somme de deux opérandes numériques ou la concaténation de deux chaînes de caractères.
+
+```js
+console.log(3 + 4); // 7
+```
+
+- **Soustraction (-)**
+  > L'opérateur de soustraction effectue la soustraction entre les deux opérandes et fournit la différence obtenue.
+
+```js
+console.log(3 - 4); // -1
+```
+
+#### Niveau 5
+
+- **ET logique (&&)**
+  > L'opérateur ET logique renvoie vrai si et uniquement si ses deux opérandes sont true ou équivalents à true.
+
+```js
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0); // false
+```
+
+#### Niveau 4
+
+- **OU logique (||)**
+  > L'opérateur OU logique renvoie vrai si et seulement si au moins un de ses opérandes est vrai. Cet opérateur est généralement utilisé avec des valeurs booléennes et, lorsque c'est le cas, il renvoie une valeur booléenne.
+
+```js
+const a = 3;
+const b = -2;
+
+console.log(a > 0 || b > 0); // true
+```
+
+- **Coalescence des nuls (??)**
+  > L'opérateur de coalescence des nuls est un opérateur logique qui renvoie son opérande de droite lorsque son opérande de gauche vaut null ou undefined et qui renvoie son opérande de gauche sinon.
+
+```js
+const foo = null ?? "default string";
+console.log(foo); // "default string"
+
+const baz = 0 ?? 42;
+console.log(baz); // 0
+```
+
+#### Niveau 3
+
+- **L'opérateur conditionnel ternaire**
+  > L'opérateur (ternaire) conditionnel est le seul opérateur JavaScript qui comporte trois opérandes. Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration de Instructions/if...else.
+
+```js
+function getFee(isMember) {
+  return isMember ? "$2.00" : "$10.00";
+}
+
+console.log(getFee(true)); // $2.00
+console.log(getFee(false)); // "$10.00"
+console.log(getFee(null)); // "$10.00"
+```
+
+#### Niveau 2
+
+- **Affectation ((=), (+=), (-=),(\*_=), (_=), (/=), (%=)...)**
+  > L'opérateur d'affectation "affecte" une valeur à une variable.
+
+#### Niveau 1
+
+- **Virgule (,)**
+  > L'opérateur virgule permet d'évaluer chacun de ses opérandes (de la gauche vers la droite) et de renvoyer la valeur du dernier opérande.
+
+```js
+let x = 1;
+x = (x++, x);
+console.log(x); // 2
+
+x = (2, 3);
+console.log(x); // 3
 ```
 
 ## Les Templates Literals
