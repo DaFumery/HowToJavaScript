@@ -2,10 +2,10 @@
 
 ## Table des matières
 
-- [Hello World!](#Hello-World!)
+- [Hello World!](#hello-world)
 - [Variables et Valeurs](#Variables-et-Valeurs)
 - [Les Types de Données](#Les-Types-de-Données)
-  - [Différences entre un Objects et une Primitive](#Différences-entre-un-Objects-et-une-Primitive)
+  - [Différences entre un Object et une Primitive](#Différences-entre-un-Object-et-une-Primitive)
   - [Les 7 données Primitive](#Les-7-données-Primitive)
   - [TypeOf](#TypeOf)
 - [let, const and var](#let,-const-and-var)
@@ -85,7 +85,7 @@ let PI = 3.1415;
 
 ## Les Types de Données
 
-### Différences entre un Objects et une Primitive
+### Différences entre un Object et une Primitive
 
 Une valeur peut être de deux catégories:
 
