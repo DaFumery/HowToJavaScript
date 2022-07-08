@@ -162,7 +162,7 @@ La déclaration **var**, permet de définir une variable globale ou locale à un
 
 #### En résumé
 
-![En résumé](\img\let-var-const-3.png)
+![En résumé](img/let-var-const-3.png)
 
 ## Les Opérateurs Basics
 
