@@ -139,8 +139,6 @@ anneeNaissance = 1997;
 console.log(anneeNaissance); // 1997
 ```
 
-#### Résumé
-
 ### La déclaration const
 
 La déclaration **const** permet de créer une constante nommée accessible uniquement en lecture. Cela ne signifie pas que la valeur contenue est immuable, uniquement que **l'identifiant ne peut pas être réaffecté.**
@@ -151,8 +149,6 @@ La déclaration **const** permet de créer une constante nommée accessible uniq
 const anneeNaissance = 1997;
 anneeNaissance = 1996; // Error
 ```
-
-#### Résumé
 
 ### La déclaration var
 
@@ -165,6 +161,21 @@ La déclaration **var**, permet de définir une variable globale ou locale à un
 ![En résumé](img/let-var-const-3.png)
 
 ## Les Opérateurs Basics
+
+### Opérateurs d'affectation
+
+Un opérateur d'affectation assigne une valeur à son opérande gauche, valeur basée sur celle de l'opérande droit.
+
+- Affectation après addition x += y
+  > x = x + y
+- Affectation après soustraction x -= y
+  > x = x - y
+- Affectation après multiplication x \*= y
+  > x = x \* y
+- Affectation après division x /= y
+  > x = x / y
+- Affectation du reste x %= y
+  > x = x % y
 
 ## Précédence des Opérateurs
 
