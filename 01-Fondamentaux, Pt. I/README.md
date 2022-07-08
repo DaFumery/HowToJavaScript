@@ -166,16 +166,40 @@ La déclaration **var**, permet de définir une variable globale ou locale à un
 
 Un opérateur d'affectation assigne une valeur à son opérande gauche, valeur basée sur celle de l'opérande droit.
 
-- Affectation après addition x += y
-  > x = x + y
-- Affectation après soustraction x -= y
-  > x = x - y
-- Affectation après multiplication x \*= y
-  > x = x \* y
-- Affectation après division x /= y
-  > x = x / y
-- Affectation du reste x %= y
-  > x = x % y
+- Affectation après addition
+
+```js
+x = x + y;
+x += y;
+```
+
+- Affectation après soustraction
+
+```js
+x = x - y;
+x -= y;
+```
+
+- Affectation après multiplication
+
+```js
+x = x * y;
+x *= y;
+```
+
+- Affectation après division
+
+```js
+x = x / y;
+x /= y;
+```
+
+- Affectation du reste
+
+```js
+x = x % y;
+x %= y;
+```
 
 ## Précédence des Opérateurs
 
@@ -196,6 +220,10 @@ Un opérateur d'affectation assigne une valeur à son opérande gauche, valeur b
 ## La Condition Switch
 
 ## Les Opérateurs Ternaires
+
+```
+
+```
 
 ```
 
