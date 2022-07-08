@@ -4,7 +4,7 @@
 
 - [Hello World!](#Hello-World!)
 - [Variables et Valeurs](#Variables-et-Valeurs)
-- [Les Types de Données](#Les-Types-de-Données)
+- [Les Types de Données](#Les-Types-de-Données) -[Différences entre un Objects et une Primitive](#Différences-entre-un-Objects-et-une-Primitive) -[Les 7 données Primitive](#Les-7-données-Primitive)
 - [let, const and var](#let,-const-and-var)
 - [Les Opérateurs Basics](#Les-Opérateurs-Basics)
 - [Précédence des Opérateurs](#Précédence-des-Opérateurs)
@@ -164,7 +164,7 @@ La déclaration **var**, permet de définir une variable globale ou locale à un
 
 ### Opérateurs d'affectation
 
-Un opérateur d'affectation assigne une valeur à son opérande gauche, valeur basée sur celle de l'opérande droit.
+**Un opérateur d'affectation** assigne une valeur à son opérande gauche, valeur basée sur celle de l'opérande droit.
 
 - Affectation après addition
 
@@ -203,7 +203,7 @@ x %= y;
 
 ### Opérateurs de comparaison
 
-Un opérateur de comparaison compare ses deux opérandes et renvoie un valeur booléenne correspondant au résultat de la comparaison (vraie ou fausse). Les opérandes peuvent être des nombres, des chaînes de caractères, des booléens ou des objets.
+**Un opérateur de comparaison** compare ses deux opérandes et renvoie un valeur booléenne correspondant au résultat de la comparaison (vraie ou fausse). Les opérandes peuvent être des nombres, des chaînes de caractères, des booléens ou des objets.
 
 - Égalité (==)
   > Renvoie true si les opérandes sont égaux après conversion en valeurs de mêmes types.
@@ -279,7 +279,7 @@ console.log(value1 <= value2); // True
 
 ### Opérateurs arithmétiques
 
-Les opérateurs arithmétiques ont pour opérandes des valeurs numériques (des littéraux ou des variables) et renvoient une valeur numérique.
+**Les opérateurs arithmétiques** ont pour opérandes des valeurs numériques (des littéraux ou des variables) et renvoient une valeur numérique.
 
 - Reste (%)
   > Renvoie le reste entier de la division entre les deux opérandes.
@@ -340,6 +340,45 @@ let value1 = 3;
 let value2 = 5;
 let total = value1 ** value2;
 console.log(total); // 243
+```
+
+### Opérateurs logiques
+
+- ET logique (&&)
+  > Renvoie expr1 s'il peut être converti à false, sinon renvoie expr2
+  > Dans le cas où on utilise des opérandes booléens, && renvoie true si les deux opérandes valent true
+
+```js
+var a1 = true && true; // t && t renvoie true
+var a2 = true && false; // t && f renvoie false
+var a3 = false && true; // f && t renvoie false
+var a4 = false && 3 == 4; // f && f renvoie false
+var a5 = "Chat" && "Chien"; // t && t renvoie Chien
+var a6 = false && "Chat"; // f && t renvoie false
+var a7 = "Chat" && false; // t && f renvoie false
+```
+
+- OU logique (||)
+  > Renvoie expr1 s'il peut être converti à true, sinon renvoie expr2
+  > Dans le cas où on utilise des opérandes booléens, || renvoie true si l'un des opérandes vaut true, si les deux valent false, il renvoie false
+
+```js
+var o1 = true || true; // t || t renvoie true
+var o2 = false || true; // f || t renvoie true
+var o3 = true || false; // t || f renvoie true
+var o4 = false || 3 == 4; // f || f renvoie false
+var o5 = "Chat" || "Chien"; // t || t renvoie Chat
+var o6 = false || "Chat"; // f || t renvoie Chat
+var o7 = "Chat" || false; // t || f renvoie Chat
+```
+
+- NON logique (!)
+  > Renvoie false si son unique opérande peut être converti en true, sinon il renvoie true.
+
+```js
+var n1 = !true; // !t renvoie false
+var n2 = !false; // !f renvoie true
+var n3 = !"Chat"; // !t renvoie false
 ```
 
 ## Précédence des Opérateurs
