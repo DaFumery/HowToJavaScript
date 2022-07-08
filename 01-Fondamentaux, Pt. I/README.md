@@ -76,7 +76,12 @@ let PI = 3.1415;
 
 ### Les 7 données **Primitive**
 
-- Number: Nombres à virgule :point_right:
+- **Number**: Nombres à virgule
+  > Pour les entiers et les décimaux.
+- **String**: Sequence de caractères
+  > Pour le texte.
+- **Booléen**: Type logique de valeur True ou False
+  >
 
 ## let, const and var
 
