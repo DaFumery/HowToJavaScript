@@ -201,6 +201,146 @@ x = x % y;
 x %= y;
 ```
 
+### Opérateurs de comparaison
+
+Un opérateur de comparaison compare ses deux opérandes et renvoie un valeur booléenne correspondant au résultat de la comparaison (vraie ou fausse). Les opérandes peuvent être des nombres, des chaînes de caractères, des booléens ou des objets.
+
+- Égalité (==)
+  > Renvoie true si les opérandes sont égaux après conversion en valeurs de mêmes types.
+
+```js
+let value1 = 3;
+let value2 = "3";
+console.log(value1 == value2); // True
+```
+
+- Inégalité (!=)
+  > Renvoie true si les opérandes sont différents.
+
+```js
+let value1 = 4;
+let value2 = "3";
+console.log(value1 != value2); // True
+```
+
+- Égalité parfaite/stricte (===)
+  > Renvoie true si les opérandes sont égaux et de même type.
+
+```js
+let value1 = 3;
+let value2 = 3;
+console.log(value1 === value2); // True
+```
+
+- Inégalité stricte (!=)
+  > Renvoie true si les opérandes ne sont pas égaux ou s'ils ne sont pas de même type.
+
+```js
+let value1 = 3;
+let value2 = "3";
+console.log(value1 !== value2); // True
+```
+
+- Supériorité stricte (>)
+  > Renvoie true si l'opérande gauche est supérieur (strictement) à l'opérande droit.
+
+```js
+let value1 = 5;
+let value2 = "3";
+console.log(value1 > value2); // True
+```
+
+- Supériorité ou égalité (>=)
+  > Renvoie true si l'opérande gauche est supérieur ou égal à l'opérande droit.
+
+```js
+let value1 = 3;
+let value2 = "3";
+console.log(value1 >= value2); // True
+```
+
+- Infériorité stricte (<)
+  > Renvoie true si l'opérande gauche est inférieur (strictement) à l'opérande droit.
+
+```js
+let value1 = 3;
+let value2 = "5";
+console.log(value1 < value2); // True
+```
+
+- Infériorité ou égalité (<=)
+  > Renvoie true si l'opérande gauche est inférieur ou égal à l'opérande droit.
+
+```js
+let value1 = 3;
+let value2 = "3";
+console.log(value1 <= value2); // True
+```
+
+### Opérateurs arithmétiques
+
+Les opérateurs arithmétiques ont pour opérandes des valeurs numériques (des littéraux ou des variables) et renvoient une valeur numérique.
+
+- Reste (%)
+  > Renvoie le reste entier de la division entre les deux opérandes.
+
+```js
+let value1 = 12;
+let value2 = 5;
+console.log(value1 % value2); // 2
+```
+
+- Incrément (++)
+  > Ajoute un à son opérande.
+
+```js
+let value1 = 3;
+let value2 = 3;
+++value1;
+value2++;
+console.log(value1); // 4
+console.log(value2); // 4
+```
+
+- Décrément (--)
+  > Soustrait un à son opérande.
+
+```js
+let value1 = 3;
+let value2 = 3;
+--value1;
+value2--;
+console.log(value1); // 2
+console.log(value2); // 2
+```
+
+- Négation unaire (-)
+  > Renvoie la valeur opposée de l'opérande.
+
+```js
+let value1 = 3;
+console.log(-value1); // -3
+```
+
+- Plus unaire (+)
+  > Si l'opérande n'est pas un nombre, il tente de le convertir en une valeur numérique.
+
+```js
+let value1 = +"3";
+let value2 = +true;
+console.log(value1); // number 3
+console.log(value2); // 1
+```
+
+- Opérateur d'exponentiation (\*\*) (puissance)
+  > Calcule un nombre (base) élevé à une puissance donnée (soit base^puissance)
+
+```js
+let value1 = 3;
+let value2 = 5;
+let total = value1 ** value2;
+console.log(total); // 243
+
 ## Précédence des Opérateurs
 
 ## Les Templates Literals
@@ -220,6 +360,8 @@ x %= y;
 ## La Condition Switch
 
 ## Les Opérateurs Ternaires
+
+```
 
 ```
 

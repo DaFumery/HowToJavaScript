@@ -18,6 +18,8 @@ console.log(typeof "Mathys"); // string
 console.log(typeof 25); // number
 
 ////////////////
-const anneeNaissance = 1997;
-anneeNaissance = 1996;
-console.log(anneeNaissance); // 1997
+
+let value1 = 3;
+let value2 = 5;
+let total = value1 ** value2;
+console.log(total); // number 3
