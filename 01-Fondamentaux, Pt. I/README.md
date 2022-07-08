@@ -41,14 +41,20 @@ if (js === "C'est chiant à mourir mec") {
 
 ## Variables et Valeurs
 
-On utilise le **camelCase** pour nommer une variable en JS.
-On ne peut pas utiliser d'autres caractères que les lettres, des chiffres, des traits de soulignement ou le signe dollar.
-On ne déclare **jamais** une variable par un chiffre.
+- On utilise le **camelCase** pour nommer une variable en JS.
+- On ne peut pas utiliser d'autres caractères que les lettres, des chiffres, des traits de soulignement ou le signe dollar.
+- On ne déclare **jamais** une variable par un chiffre.
+- Les keywords "this", "new", "break", "class", "final", "eval" et bien d'autres sont des keywords réservés par JavaScript.
 
 ```js
+// Commence par un chiffre
 let 420blazeIt = 'Fume, Fume' // Error
 
+// Illegal Character
 let blaze&It = 420 // Error
+
+// Reserved Keywords
+let new = 'Roule, Roule' // Error
 ```
 
 ```js
@@ -61,6 +67,9 @@ console.log(prenom); // "Mathys"
 // On réassigne à la variable prénom la valeur "Bob"
 prenom = "Bob";
 console.log(prenom); // "Bob"
+
+// On déclare une constante en majuscule
+let PI = 3.1415;
 ```
 
 ## Les Types de Données
