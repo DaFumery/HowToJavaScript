@@ -74,6 +74,10 @@ let PI = 3.1415;
 
 ## Les Types de Données
 
+### Les 7 données **Primitive**
+
+- Number: Nombres à virgule :point_right:
+
 ## let, const and var
 
 ## Les Opérateurs Basics
