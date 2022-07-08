@@ -1,16 +1,12 @@
-// Windows Alert
-alert("Hello World!");
+console.log("Mathys"); // Mathys est la valeur
+console.log(23); // 23 est la valeur
 
-// Console
-console.log("Hello World!"); // 'Hello World!'
+// On déclare une variable prénom de valeur "Mathys"
+let prenom = "Mathys";
 
-// Variable js avec valeur "Incroyable"
-let js = "Incroyable";
+// Renvoie la valeur de la variable prénom
+console.log(prenom); // "Mathys"
 
-// Réassignation de la variable js
-js = "C'est chiant à mourir mec";
-
-// Condition If avec opérateur d'égalité parfaite
-if (js === "C'est chiant à mourir mec") {
-  console.log("Mais je continue quand même"); // 'Mais je continue quand même'
-}
+// On réassigne à la variable prénom la valeur "Bob"
+prenom = "Bob";
+console.log(prenom); // "Bob"

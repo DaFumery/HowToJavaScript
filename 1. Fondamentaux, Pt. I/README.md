@@ -3,10 +3,10 @@
 ## Table des matières
 
 - [Hello World!](#Hello-World!)
-- [Variables et Valeurs](#Values-and-Variables)
-- [Les Types de Données](#Data-Types)
+- [Variables et Valeurs](#Variables-et-Valeurs)
+- [Les Types de Données](#Les-Types-de-Données)
 - [let, const and var](#let,-const-and-var)
-- [Les Opérateurs Basics](#Basic-Operators)
+- [Les Opérateurs Basics](#Les-Opérateurs-Basics)
 - [Précédence des Opérateurs](#Précédence-des-Opérateurs)
 - [Les Templates Literals](#Les-Templates-Literals)
 - [La Condition If / Else](#La-Condition-If-/-Else)
@@ -40,6 +40,28 @@ if (js === "C'est chiant à mourir mec") {
 ```
 
 ## Variables et Valeurs
+
+On utilise le **camelCase** pour nommer une variable en JS.
+On ne peut pas utiliser d'autres caractères que les lettres, des chiffres, des traits de soulignement ou le signe dollar.
+On ne déclare **jamais** une variable par un chiffre.
+
+```js
+let 420blazeIt = 'Fume, Fume' // Error
+
+let blaze&It = 420 // Error
+```
+
+```js
+// On déclare une variable prénom de valeur "Mathys"
+let prenom = "Mathys";
+
+// Renvoie la valeur de la variable prénom
+console.log(prenom); // "Mathys"
+
+// On réassigne à la variable prénom la valeur "Bob"
+prenom = "Bob";
+console.log(prenom); // "Bob"
+```
 
 ## Les Types de Données
 
