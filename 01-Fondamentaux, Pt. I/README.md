@@ -19,6 +19,7 @@
   - [Opérateurs arithmétiques](#opérateurs-arithmétiques)
   - [Opérateurs logiques](#opérateurs-logiques)
 - [Précédence des Opérateurs](#Précédence-des-Opérateurs)
+  - [Classement des précédences des opérateurs](#classement-des-précédences-des-opérateurs-du-plus-haut-au-plus-bas)
 - [Les Templates Literals](#Les-Templates-Literals)
 - [La Condition If / Else](#La-Condition-If-/-Else)
 - [La Conversion et Coercion de typage](#La-Conversion-et-Coercion-de-typage)
@@ -393,6 +394,70 @@ var n3 = !"Chat"; // !t renvoie false
 ```
 
 ## Précédence des Opérateurs
+
+La précédence des opérateurs détermine l'ordre dans lequel les opérateurs sont évalués. Les opérateurs avec la plus haute précédence sont évalués en premier.
+
+### Classement des précédences des opérateurs (du plus haut au plus bas)
+
+- Opérateur de groupement (...)
+  > L'opérateur de groupement contrôle la précédence de l'évaluation dans les expressions.
+
+```js
+console.log(1 + 2 * 3); // 1 + 6
+```
+
+- Appel de fonction … ( … )
+  > L'appel d'une fonction exécute une fonction avec les paramètres définis.
+
+```js
+function carré(nombre) {
+  return nombre * nombre;
+}
+carré(4);
+```
+
+- Chaînage optionnel (?.)
+  > L'opérateur de chaînage optionnel ?. permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide.
+
+```js
+const tanyDrej0 = {
+  prenom: "Mathys",
+  dog: {
+    nom: "Chaussette",
+  },
+};
+
+const dogNom = tanyDrej0.dog?.nom;
+console.log(dogNom); // Chaussette
+```
+
+- Accesseurs de propriété en point (… . …)
+  > L'opérateur de chaînage optionnel ?. permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide.
+
+```js
+const tanyDrej0 = {
+  prenom: "Mathys",
+  dog: {
+    nom: "Chaussette",
+  },
+};
+
+console.log(tanyDrej0.dog.nom);
+```
+
+- Accesseurs de propriété en crochet (… [ … ])
+  > L'opérateur de chaînage optionnel ?. permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide.
+
+```js
+const tanyDrej0 = {
+  prenom: "Mathys",
+  dog: {
+    nom: "Chaussette",
+  },
+};
+
+console.log(tanyDrej0["dog"]["nom"]);
+```
 
 ## Les Templates Literals
 

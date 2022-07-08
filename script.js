@@ -19,7 +19,11 @@ console.log(typeof 25); // number
 
 ////////////////
 
-let value1 = 3;
-let value2 = 5;
-let total = value1 ** value2;
-console.log(total); // number 3
+const tanyDrej0 = {
+  prenom: "Mathys",
+  dog: {
+    nom: "Chaussette",
+  },
+};
+
+console.log(tanyDrej0["dog"]["nom"]);
