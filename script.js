@@ -16,3 +16,8 @@ console.log(typeof booleanValue); // Boolean
 console.log(typeof booleanValue); // boolean
 console.log(typeof "Mathys"); // string
 console.log(typeof 25); // number
+
+////////////////
+const anneeNaissance = 1997;
+anneeNaissance = 1996;
+console.log(anneeNaissance); // 1997

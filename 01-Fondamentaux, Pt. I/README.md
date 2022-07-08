@@ -94,9 +94,12 @@ let prenom = "Mathys;
 let age = 25;
 ```
 
-**Une valeur est primitive que lorsqu'elle n'est pas un object**
+**Une valeur est primitive que lorsqu'elle n'est pas un object.**
 
 ### Les 7 données **Primitive**
+
+**JavaScript a un typage dynamique** : nous n'avons pas à définir manuellement le type de données de la valeur stockée dans une variable.
+Au lieu de cela, **les types de données sont déterminés automatiquement**.
 
 - **Number**: Nombre entier ou décimal.
   > Pour les entiers et les décimaux.
@@ -108,9 +111,6 @@ let age = 25;
 - **Null**: Valeur d'affectation qui signie "Pas de Valeur". Il est du type Object.
 - **Symbol**: Valeur unique qui ne peut être changée.
 - **BigInt**: Contient un entier plus large que ce que peut contenir **Number**.
-
-**JavaScript a un typage dynamique** : nous n'avons pas à définir manuellement le type de données de la valeur stockée dans une variable.
-Au lieu de cela, **les types de données sont déterminés automatiquement**.
 
 ### TypeOf
 
@@ -126,6 +126,74 @@ console.log(typeof "Mathys"); // string
 ```
 
 ## let, const and var
+
+Lors de la déclaration d'une variable, on privilégie d'abord **const**, puis **let** et enfin **var** (var est de moins en moins utilisé)
+
+### La déclaration let
+
+La déclaration **let** permet de déclarer une variable dont la portée est celle du bloc courant, éventuellement en initialisant sa valeur.
+
+```js
+let anneeNaissance;
+anneeNaissance = 1997;
+console.log(anneeNaissance); // 1997
+```
+
+#### Résumé
+
+- Stockée en global
+  > Non
+- Portée de la fonction
+  > Oui
+- Portée du bloc
+  > Oui
+- Ré-assignation
+  > Oui
+- Re-déclaration
+  > Non
+
+### La déclaration const
+
+La déclaration **const** permet de créer une constante nommée accessible uniquement en lecture. Cela ne signifie pas que la valeur contenue est immuable, uniquement que **l'identifiant ne peut pas être réaffecté.**
+
+> On doit obligatoirement initialiser une valeur à une variable const.
+
+```js
+const anneeNaissance = 1997;
+anneeNaissance = 1996; // Error
+```
+
+#### Résumé
+
+- Stockée en global
+  > Non
+- Portée de la fonction
+  > Oui
+- Portée du bloc
+  > Oui
+- Ré-assignation
+  > Non
+- Re-déclaration
+  > Non
+
+### La déclaration var
+
+La déclaration **var**, permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction).
+
+> La portée d'une variable déclarée avec var est le contexte d'exécution courant
+
+#### Résumé
+
+- Stockée en global
+  > Oui
+- Portée de la fonction
+  > Oui
+- Portée du bloc
+  > Non
+- Ré-assignation
+  > Oui
+- Re-déclaration
+  > Non
 
 ## Les Opérateurs Basics
 
