@@ -74,14 +74,43 @@ let PI = 3.1415;
 
 ## Les Types de Données
 
+### Différences entre un Objects et une Primitive
+
+**JavaScript a un typage dynamique** : nous n'avons pas à définir manuellement le type de données de la valeur stockée dans une variable.
+Au lieu de cela, les types de données sont déterminés automatiquement.
+
+Une valeur peut être de deux catégories:
+
+- **Object**
+
+```js
+let me = {
+  name: "Mathys",
+  age: 25,
+};
+```
+
+- **Primitive**: Composée de 7 types de données
+
+```js
+let prenom = "Mathys;
+let age = 25;
+```
+
+**Une valeur est primitive que lorsqu'elle n'est pas un object**
+
 ### Les 7 données **Primitive**
 
-- **Number**: Nombres à virgule
+- **Number**: Nombres à virgule.
   > Pour les entiers et les décimaux.
-- **String**: Sequence de caractères
+- **String**: Sequence de caractères.
   > Pour le texte.
 - **Booléen**: Type logique de valeur True ou False
-  >
+  > Pour la prise de décision
+- **Undefined**: Variable déclarée mais sans valeur (valeur vide)
+- **Null**:Valeur d'affectation qui signie "Pas de Valeur". Il est du type Object.
+- **Symbol**: Valeur unique qui ne peut être changée.
+- **BigInt**:Contient un entier plus large que ce que peut contenir **Number**
 
 ## let, const and var
 
@@ -106,3 +135,7 @@ let PI = 3.1415;
 ## La Condition Switch
 
 ## Les Opérateurs Ternaires
+
+```
+
+```
