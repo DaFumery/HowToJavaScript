@@ -141,17 +141,6 @@ console.log(anneeNaissance); // 1997
 
 #### Résumé
 
-- Stockée en global
-  > Non
-- Portée de la fonction
-  > Oui
-- Portée du bloc
-  > Oui
-- Ré-assignation
-  > Oui
-- Re-déclaration
-  > Non
-
 ### La déclaration const
 
 La déclaration **const** permet de créer une constante nommée accessible uniquement en lecture. Cela ne signifie pas que la valeur contenue est immuable, uniquement que **l'identifiant ne peut pas être réaffecté.**
@@ -165,35 +154,15 @@ anneeNaissance = 1996; // Error
 
 #### Résumé
 
-- Stockée en global
-  > Non
-- Portée de la fonction
-  > Oui
-- Portée du bloc
-  > Oui
-- Ré-assignation
-  > Non
-- Re-déclaration
-  > Non
-
 ### La déclaration var
 
 La déclaration **var**, permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction).
 
 > La portée d'une variable déclarée avec var est le contexte d'exécution courant
 
-#### Résumé
+#### En résumé
 
-- Stockée en global
-  > Oui
-- Portée de la fonction
-  > Oui
-- Portée du bloc
-  > Non
-- Ré-assignation
-  > Oui
-- Re-déclaration
-  > Non
+![En résumé](\img\let-var-const-3.png)
 
 ## Les Opérateurs Basics
 
