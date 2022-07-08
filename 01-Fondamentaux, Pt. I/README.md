@@ -340,6 +340,7 @@ let value1 = 3;
 let value2 = 5;
 let total = value1 ** value2;
 console.log(total); // 243
+```
 
 ## Précédence des Opérateurs
 
@@ -360,6 +361,8 @@ console.log(total); // 243
 ## La Condition Switch
 
 ## Les Opérateurs Ternaires
+
+```
 
 ```
 
