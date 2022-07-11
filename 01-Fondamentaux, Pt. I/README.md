@@ -22,11 +22,15 @@
   - [Classement des précédences des opérateurs](#classement-des-précédences-des-opérateurs-du-plus-haut-au-plus-bas)
 - [Les Templates Literals](#Les-Templates-Literals)
 - [La Condition If / Else](#la-condition-if--else)
-- [La Conversion et Coercion de typage](#La-Conversion-et-Coercion-de-typage)
+- [La Conversion et Coercition de typage](#la-conversion-et-Coercition-de-typage)
   - [Type Conversion](#type-conversion)
+    - [Définition de type conversion](#définition-de-type-conversion)
     - [Converting Strings to Numbers](#converting-strings-to-numbers)
     - [Converting Numbers to Strings](#converting-numbers-to-strings)
     - [Converting Booleans to Numbers](#converting-booleans-to-numbers)
+  - [Type Coercition](#type-coercition)
+    - [Définition de type coercition](#définition-de-type-coercition)
+    - [Autre exemple](#autre-exemple)
 - [Les Valeurs True et False](#Les-Valeurs-True-et-False)
 - [Les Opérateurs d'égalité](#Les-Opérateurs-d'égalité)
 - [La Logique Booléenne](#La-Logique-Booléenne)
@@ -697,9 +701,13 @@ if (age >= majeur) {
 // Mathys devra attendre 1 année(s) pour consommer une bière
 ```
 
-## La Conversion et Coercion de typage
+## La Conversion et Coercition de typage
 
 ### Type Conversion
+
+#### Définition de type Conversion
+
+**La conversion de type (ou transtypage)** est le transfert d'une donnée d'un type de donnée vers un autre. Une conversion implicite se produit quand le compilateur affecte les types de donnée automatiquement, mais le code source peut aussi demander à ce qu'une conversion ait lieu de manière explicite.
 
 #### Converting Strings to Numbers
 
@@ -750,6 +758,47 @@ console.log(String(inputTrue)); // "true"
 const inputToString = String(inputTrue);
 console.log(typeof inputTrue); // boolean
 console.log(typeof inputToString); // string
+```
+
+### Type Coercition
+
+#### Définition de type Coercition
+
+**La type coercition** est la conversion automatique ou implicite de valeurs d'un type de données à un autre. La différence fondamentale entre la type coercition et la type conversion est que **la type coercition est implicite** alors que **la type conversion peut être implicite ou explicite**.
+
+```js
+// La valeur 25 de type nombre est automatiquement converti en string lors de la concaténation
+const coercition1 = "J'ai " + 25 + " ans";
+console.log(coercition1); // "J'ai 25 ans"
+const coercition2 = "J'ai " + "25" + " ans";
+console.log(coercition2); // "J'ai 25 ans"
+
+// La coercition permet de calculer des valeurs numériques meme contenus dans des strings.
+const coercition3 = "23" * "2";
+console.log(coercition3); // 46
+
+console.log(typeof coercition1); // string
+console.log(typeof coercition2); // string
+console.log(typeof coercition3); // number
+```
+
+#### Autre exemple
+
+```js
+// La présence du (+) permet à JS de créer une concaténation des valeurs de différents types vers un type commun : le string.
+let n1 = "1" + 1 + 1;
+console.log(n1); // "111"
+console.log(typeof n1); // string
+
+// La présence du (- 1) permet à JS de convertir automatiquement le string en number
+n1 = n1 - 1;
+console.log(n1); // 110
+console.log(typeof n1); // number
+
+// La présence du (- 2) permet à JS de convertir automatiquement le string en number
+let n2 = "1" + 1 - 2;
+console.log(n2); // 9
+console.log(typeof n2); // number
 ```
 
 ## Les Valeurs True et False

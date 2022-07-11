@@ -1,10 +1,24 @@
-const inputTrue = true;
-console.log(inputTrue); // true
-console.log(typeof inputTrue); // boolean
+// La valeur 25 de type nombre et automatiquement converti en string lors de la concaténation
+const coercition1 = "J'ai " + 25 + " ans";
+console.log(coercition1); // "J'ai 25 ans"
+const coercition2 = "J'ai " + "25" + " ans";
+console.log(coercition2); // "J'ai 25 ans"
+const coercition3 = "23" * "2";
+console.log(coercition3); // 46
 
-// Le constructeur Number() permet de créer un objet Number sur un booléen.
-console.log(String(inputTrue)); // "true"
+console.log(typeof coercition1); // string
+console.log(typeof coercition2); // string
+console.log(typeof coercition3); // number
 
-const inputToString = String(inputTrue);
-console.log(typeof inputTrue); // boolean
-console.log(typeof inputToString); // string
+let n1 = "1" + 1 + 1;
+console.log(n1); // "111"
+console.log(typeof n1); // string
+
+n1 = n1 - 1;
+console.log(n1); // 110
+console.log(typeof n1); // number
+
+// La présence du (- 2) permet à JS de convertir automatiquement le string en number
+let n2 = "1" + 1 - 2;
+console.log(n2); // 9
+console.log(typeof n2); // number
