@@ -1,9 +1,10 @@
-const prenom = "Mathys";
-const travail = "développeur";
-const anneeNaissance = 1997;
+const age = 17;
+const majeur = 18;
 
-const mathys = `Je m'appelle ${prenom}, j'ai ${
-  2022 - anneeNaissance
-} ans et je suis ${travail}`;
-
-console.log(mathys);
+if (age >= majeur) {
+  console.log("Mathys peut commander une Kriek Rouge au bar");
+} else {
+  console.log(
+    `Mathys devra attendre ${majeur - age} années pour consommer une bière`
+  );
+}

@@ -675,6 +675,24 @@ console.log(mathys);
 
 ## La Condition If / Else
 
+L'instruction if exécute une instruction si une condition donnée est vraie ou équivalente à vrai. Si la condition n'est pas vérifiée, il est possible d'utiliser une autre instruction.
+
+```js
+const age = 17;
+const majeur = 18;
+
+if (age >= majeur) {
+  console.log("Mathys peut commander une Kriek Rouge au bar");
+} else {
+  console.log(
+    `Mathys devra attendre ${
+      majeur - age
+    } année(s) pour consommer une Kriek de femme`
+  );
+}
+// Mathys devra attendre 1 année(s) pour consommer une bière
+```
+
 ## La Conversion et Coercion de typage
 
 ## Les Valeurs True et False
