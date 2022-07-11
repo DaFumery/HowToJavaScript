@@ -44,6 +44,10 @@
   - [Différences entre la notation en point et en crochet](#différences-entre-la-notation-en-point-et-en-crochet)
     - [La notation en Point](#la-notation-en-point-dot-notation)
     - [La notation en Crochet](#la-notation-en-crochet-bracket-notation)
+- [Les Itérations](#les-itérations)
+  - [La Boucle While](#la-boucle-while)
+  - [La Boucle For](#la-boucle-for)
+  - [Looping d'un tableau]()
 
 ## Strict Mode
 
@@ -415,8 +419,7 @@ const mathys = {
 };
 
 console.log(mathys.calcAge()); // 25
-console.log(mathys.getResume());
-// Fumery Mathys est un développeur de 25 ans et il possède un permis de conduire
+console.log(mathys.getResume()); // Fumery Mathys est un développeur de 25 ans et il possède un permis de conduire
 ```
 
 ### Différences entre la notation en point et en crochet
@@ -439,3 +442,69 @@ console.log(mathys.getResume());
 > obtenir = objet[nom_de_propriété];
 
 > objet[nom_de_propriété] = définir;
+
+## Les Itérations
+
+Les boucles permettent de répéter une certaine logique suivant une condition précise. Il existe plusieurs manières de créer des boucles.
+
+### La Boucle While
+
+La boucle while permet d'exécuter un code tant que la condition passée en paramètre n'est pas satisfaite.
+
+> Il faudra faire attention avec l'utilisation de cette boucle à ce que la condition devienne fausse à un moment donné au risque de voir la boucle se dérouler de manière infinie.
+
+```js
+// While continue tant que la condition est true
+let rep = 1;
+while (rep <= 10) {
+  rep++;
+  console.log(`Souveler de la fonte répétition ${rep}`);
+}
+```
+
+Il est possible de **forcer la sortie de la boucle à l'aide du mot clef break**
+
+### La Boucle For
+
+La boucle for permet d'exécuter un code un certain nombre de fois en précisant manuellement l'intervalle pour lequel on souhaite faire la boucle. Elle présente une notation plus concise que le while.
+
+```js
+// For Loop continue tant que la condition est true
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Souveler de la fonte répétition ${rep}`);
+}
+// Souveler de la fonte répétition 1
+// Souveler de la fonte répétition 2
+// ...
+// Souveler de la fonte répétition 10
+```
+
+### Looping d'un tableau
+
+```js
+const mathys = [
+  "Mathys",
+  "Fumery",
+  2022 - 1997,
+  "Développeur",
+  ["Toto", "Tati", "Tata"],
+  true,
+];
+
+const types = [];
+
+for (let i = 0; i < mathys.length; i++) {
+  //Lecture du tableau mathys
+  console.log(mathys[i], typeof mathys[i]);
+  // Mathys string
+  // Fumery string
+  // 25 number
+  // ...
+  // true boolean
+
+  // Remplir le tableau types
+  types.push(typeof mathys[i]);
+}
+
+console.log(types); // [ 'string', 'string', 'number', 'string', 'object', 'boolean' ]
+```

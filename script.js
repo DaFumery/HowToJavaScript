@@ -1,27 +1,25 @@
-const mathys = {
-  prenom: "Mathys",
-  nomDeFamille: "Fumery",
-  anneeDeNaissance: 1997,
-  job: "développeur",
-  amis: ["Toto", "Tati", "Tata"],
-  permis: true,
+const mathys = [
+  "Mathys",
+  "Fumery",
+  2022 - 1997,
+  "Développeur",
+  ["Toto", "Tati", "Tata"],
+  true,
+];
 
-  calcAge: function () {
-    // Calcul l'age en fonction de l'année de Naissance
-    this.age = 2022 - this.anneeDeNaissance;
-    // Créer une propriété age dans l'objet Mathys
-    return this.age;
-  },
+const types = [];
 
-  getResume: function () {
-    return `${this.nomDeFamille} ${this.prenom} est un ${
-      this.job
-    } de ${this.calcAge()} ans et il possède ${
-      this.permis ? "un" : "pas"
-    } permis de conduire`;
-  },
-};
+for (let i = 0; i < mathys.length; i++) {
+  //Lecture du tableau mathys
+  console.log(mathys[i], typeof mathys[i]);
+  // Mathys string
+  // Fumery string
+  // 25 number
+  // ...
+  // true boolean
 
-console.log(mathys.calcAge()); // 25
+  // Remplir le tableau types
+  types.push(typeof mathys[i]);
+}
 
-console.log(mathys.getResume());
+console.log(types); // [ 'string', 'string', 'number', 'string', 'object', 'boolean' ]
