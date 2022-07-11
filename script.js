@@ -1,10 +1,10 @@
-const age = 17;
-const majeur = 18;
+const inputTrue = true;
+console.log(inputTrue); // true
+console.log(typeof inputTrue); // boolean
 
-if (age >= majeur) {
-  console.log("Mathys peut commander une Kriek Rouge au bar");
-} else {
-  console.log(
-    `Mathys devra attendre ${majeur - age} années pour consommer une bière`
-  );
-}
+// Le constructeur Number() permet de créer un objet Number sur un booléen.
+console.log(String(inputTrue)); // "true"
+
+const inputToString = String(inputTrue);
+console.log(typeof inputTrue); // boolean
+console.log(typeof inputToString); // string

@@ -21,8 +21,12 @@
 - [Précédence des Opérateurs](#Précédence-des-Opérateurs)
   - [Classement des précédences des opérateurs](#classement-des-précédences-des-opérateurs-du-plus-haut-au-plus-bas)
 - [Les Templates Literals](#Les-Templates-Literals)
-- [La Condition If / Else](#La-Condition-If-/-Else)
+- [La Condition If / Else](#la-condition-if--else)
 - [La Conversion et Coercion de typage](#La-Conversion-et-Coercion-de-typage)
+  - [Type Conversion](#type-conversion)
+    - [Converting Strings to Numbers](#converting-strings-to-numbers)
+    - [Converting Numbers to Strings](#converting-numbers-to-strings)
+    - [Converting Booleans to Numbers](#converting-booleans-to-numbers)
 - [Les Valeurs True et False](#Les-Valeurs-True-et-False)
 - [Les Opérateurs d'égalité](#Les-Opérateurs-d'égalité)
 - [La Logique Booléenne](#La-Logique-Booléenne)
@@ -694,6 +698,59 @@ if (age >= majeur) {
 ```
 
 ## La Conversion et Coercion de typage
+
+### Type Conversion
+
+#### Converting Strings to Numbers
+
+```js
+const inputAnneeString = "1997";
+console.log(inputAnneeString + 18); // "199718"
+
+// Le constructeur Number() permet de créer un objet Number.
+console.log(Number(inputAnneeString) + 18); // 2015
+
+const inputAnneeNumber = Number(inputAnneeString);
+console.log(typeof inputAnneeString); // string
+console.log(typeof inputAnneeNumber); // number
+```
+
+#### Converting Numbers to Strings
+
+```js
+const inputAnneeNumber = 1997;
+console.log(inputAnneeNumber + "18"); // 1997"18"
+console.log(typeof inputAnneeNumber); // number
+
+// Le constructeur String() permet de créer un objet String.
+console.log(String(inputAnneeNumber) + 18); // "199718"
+
+const inputAnneeString = String(inputAnneeNumber);
+console.log(typeof inputAnneeString); // string
+console.log(typeof inputAnneeNumber); // number
+```
+
+#### Converting Booleans to Numbers
+
+```js
+const inputTrue = true;
+console.log(inputTrue); // true
+console.log(typeof inputTrue); // boolean
+
+// Le constructeur Number() permet de créer un objet Number sur un booléen.
+console.log(Number(inputTrue)); // 1
+
+const inputToNumber = Number(inputTrue);
+console.log(typeof inputTrue); // boolean
+console.log(typeof inputToNumber); // number
+
+// Le constructeur String() permet de créer un objet String sur un booléen.
+console.log(String(inputTrue)); // "true"
+
+const inputToString = String(inputTrue);
+console.log(typeof inputTrue); // boolean
+console.log(typeof inputToString); // string
+```
 
 ## Les Valeurs True et False
 
