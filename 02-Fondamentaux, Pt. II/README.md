@@ -372,10 +372,47 @@ console.log(mathys.calcAge(mathys.age)); // 25
 
 // Bracket notation
 console.log(mathys["calcAge"](1997)); // 25
-console.log(mathys["calcAge"](mathys.age));
+console.log(mathys["calcAge"](mathys.age)); // 25
 
 // This keyword
 console.log(mathys.calcAgeThis()); // 25
+```
+
+### L'Opérateur this
+
+L'opérateur this est une sorte de super variable qui prendra différentes valeurs suivant le contexte dans lequelle elle est utilisée.
+
+Par défaut this prend comme valeur la variable globale (window sur le navigateur, global sur nodejs) mais sa valeur peut changer dans une fonction suivant comment elle est appellée.
+
+```js
+const mathys = {
+  prenom: "Mathys",
+  nomDeFamille: "Fumery",
+  anneeDeNaissance: 1997,
+  job: "développeur",
+  amis: ["Toto", "Tati", "Tata"],
+  permis: true,
+
+  calcAge: function () {
+    // Calcul l'age en fonction de l'année de Naissance
+    this.age = 2022 - this.anneeDeNaissance;
+    // Créer une propriété age dans l'objet Mathys
+    return this.age;
+  },
+
+  // Résumé de l'objet mathys avec opérateur this et template literal
+  getResume: function () {
+    return `${this.nomDeFamille} ${this.prenom} est un ${
+      this.job
+    } de ${this.calcAge()} ans et il possède ${
+      this.permis ? "un" : "pas"
+    } permis de conduire`;
+  },
+};
+
+console.log(mathys.calcAge()); // 25
+console.log(mathys.getResume());
+// Fumery Mathys est un développeur de 25 ans et il possède un permis de conduire
 ```
 
 ### Différences entre la notation en point et en crochet
@@ -398,3 +435,7 @@ console.log(mathys.calcAgeThis()); // 25
 > obtenir = objet[nom_de_propriété];
 
 > objet[nom_de_propriété] = définir;
+
+```
+
+```

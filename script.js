@@ -1,30 +1,27 @@
 const mathys = {
   prenom: "Mathys",
   nomDeFamille: "Fumery",
-  age: 1997,
+  anneeDeNaissance: 1997,
   job: "développeur",
   amis: ["Toto", "Tati", "Tata"],
   permis: true,
 
-  // Function expression
-  calcAge: function (anneeNaissance) {
-    return 2022 - anneeNaissance;
+  calcAge: function () {
+    // Calcul l'age en fonction de l'année de Naissance
+    this.age = 2022 - this.anneeDeNaissance;
+    // Créer une propriété age dans l'objet Mathys
+    return this.age;
   },
 
-  // Function utilisant this keyword
-  calcAgeThis: function () {
-    console.log(this);
-    return 2022 - this.age;
+  getResume: function () {
+    return `${this.nomDeFamille} ${this.prenom} est un ${
+      this.job
+    } de ${this.calcAge()} ans et il possède ${
+      this.permis ? "un" : "pas"
+    } permis de conduire`;
   },
 };
 
-// Dot notation
-console.log(mathys.calcAge(1997)); // 25
-console.log(mathys.calcAge(mathys.age)); // 25
+console.log(mathys.calcAge()); // 25
 
-// Bracket notation
-console.log(mathys["calcAge"](1997)); // 25
-console.log(mathys["calcAge"](mathys.age));
-
-// This keyword
-console.log(mathys.calcAgeThis()); // 25
+console.log(mathys.getResume());
