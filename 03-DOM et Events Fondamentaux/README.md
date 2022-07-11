@@ -12,7 +12,7 @@
 
 ## Qu'est ce que le DOM
 
-**Le Document Object Model ou DOM (pour modèle objet de document) est une interface de programmation pour les documents HTML, XML et SVG. **
+**Le Document Object Model ou DOM (pour modèle objet de document) est une interface de programmation pour les documents HTML, XML et SVG.**
 
 Il fournit une représentation structurée du document sous forme d'un arbre et définit la façon dont la structure peut être manipulée par les programmes, en termes de style et de contenu.
 
@@ -36,6 +36,7 @@ document.querySelector(".demo"); // Sélectionne le premier élément correspond
 document.getElementsByClassName("demo"); // Sélectionne les éléments avec la class démo
 document.getElementsByTagName("p"); // Sélectionne les éléments <p>
 var elements = document.querySelectorAll(".demo"); // Sélectionne les éléments correspondant au sélecteur CSS
+
 // Ces méthodes renvoient un objet NodeList enumerable
 // On peut parcourir cette liste d'éléments comme un tableau
 for (var i = 0; i < elements.length; ++i) {
