@@ -658,6 +658,21 @@ console.log(x); // 3
 
 ## Les Templates Literals
 
+Les templates Literals sont des littéraux de chaînes de caractères permettant d'intégrer des expressions.
+
+```js
+const prenom = "Mathys";
+const travail = "développeur";
+const anneeNaissance = 1997;
+
+const mathys = `Je m'appelle ${prenom}, j'ai ${
+  2022 - anneeNaissance
+} ans et je suis ${travail}`;
+
+console.log(mathys);
+// Je m'appelle Mathys, j'ai 25 ans et je suis développeur
+```
+
 ## La Condition If / Else
 
 ## La Conversion et Coercion de typage
@@ -673,19 +688,3 @@ console.log(x); // 3
 ## La Condition Switch
 
 ## Les Opérateurs Ternaires
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
