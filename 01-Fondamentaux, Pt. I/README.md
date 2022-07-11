@@ -41,8 +41,10 @@
   - [ET logique (&&)](<#et-logique-(&&)>)
   - [OU logique (||)](<#ou-logique-(||)>)
   - [NOT logique (!)](<#non-logique-(!)>)
-- [Les Opérateurs Logique](#Les-Opérateurs-Logique)
+  - [Exemple logique](#exemple-logique)
 - [La Condition Switch](#La-Condition-Switch)
+  - [Définition de la condition Switch](#définition-de-la-condition-switch)
+  - [Exemple de switch](#exemple-de-switch)
 - [Les Opérateurs Ternaires](#Les-Opérateurs-Ternaires)
 
 ## Hello World!
@@ -923,8 +925,91 @@ var n2 = !false; // !f renvoie true
 var n3 = !"Chat"; // !t renvoie false
 ```
 
-## Les Opérateurs Logique
+### Exemple logique
+
+```js
+const titulaireDuPermis = true;
+const absenceDeStrabisme = true;
+const pasFatigué = false;
+
+console.log(titulaireDuPermis && absenceDeStrabisme); // true
+console.log(titulaireDuPermis || absenceDeStrabisme); // true
+console.log(!pasFatigué); // true
+
+console.log(titulaireDuPermis && absenceDeStrabisme && pasFatigué); // false
+console.log(titulaireDuPermis && absenceDeStrabisme && !pasFatigué); // true
+
+if (titulaireDuPermis && absenceDeStrabisme && !pasFatigué) {
+  console.log("Tu peux prendre le volant mon con"); // Tu peux prendre le volant mon con
+} else {
+  console.log("Passe ton tour mecton");
+}
+```
 
 ## La Condition Switch
 
+### Définition de la condition Switch
+
+L'instruction switch évalue une expression et, selon le résultat obtenu et le cas associé, exécute les instructions correspondantes.
+C'est une bonne alternative à la structure ElseIf car mieux lisible et plus facile à écrire.
+
+### Exemple de Switch
+
+```js
+const jour = "Marday";
+
+switch (jour) {
+  case "Lunday":
+    console.log("Chouette, j'adore le Lunday");
+    break;
+  case "Marday":
+    console.log("Le Marday, j'invoque Satan Belzebuth");
+    break;
+  case "Mercreday":
+    console.log("Le Mercreday, c'est le jour des excisions");
+    break;
+  case "Jeuday":
+    console.log("Le Jeuday, je vais en boîte echangiste avec Patrick");
+    break;
+  case "Vendreday":
+    console.log("Le Vendreday, je constate que Patrick est bien membré");
+    break;
+  // Si valeur = Samedy ou DimancheDay alors...
+  case "Sameday":
+  case "DimancheDay":
+    console.log(
+      "C'est le week-end, je peux m'adonner à mon activité préféré: torturer des chatons devant leur maman chat."
+    );
+  // Valeur par défaut si paramètre invalide.
+  default:
+    console.log("Tu dois te tromper de jour de la semaine trou d'pine");
+}
+// Le Marday, j'invoque Satan Belzebuth
+```
+
 ## Les Opérateurs Ternaires
+
+### Définition de l'opérateur Ternaire
+
+L'opérateur (ternaire) conditionnel est le seul opérateur JavaScript qui comporte trois opérandes. Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration de Instructions/if...else.
+
+```js
+const age = 25;
+const patrickDisponible = true;
+
+// Condition if Else
+let boiteEchangisteMecton1;
+if (age >= 25 && patrickDisponible) {
+  boiteEchangisteMecton1 = "On fonce avec Patrick";
+} else {
+  boiteEchangisteMecton1 = "Le Cassoulet manque de saucisses";
+}
+console.log(boiteEchangisteMecton1); // On fonce avec Patrick
+
+// Condition Ternaire (important mec, déconne pas)
+const boiteEchangisteMecton2 =
+  age >= 18 && patrickDisponible
+    ? "On fonce avec Patrick"
+    : "Le Cassoulet manque de saucisses";
+console.log(boiteEchangisteMecton2); // On fonce avec Patrick
+```
