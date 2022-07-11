@@ -38,6 +38,9 @@
     - [Égalité stricte](#égalité-stricte)
     - [Égalité simple](#égalité-simple)
 - [La Logique Booléenne](#la-Logique-Booléenne)
+  - [ET logique (&&)](#et-logique)
+  - [OU logique (||)](#ou-logique)
+  - [NOT logique (!)](#non-logique)
 - [Les Opérateurs Logique](#Les-Opérateurs-Logique)
 - [La Condition Switch](#La-Condition-Switch)
 - [Les Opérateurs Ternaires](#Les-Opérateurs-Ternaires)
@@ -881,6 +884,44 @@ if (age == 18)
 ```
 
 ## La Logique Booléenne
+
+### ET logique (&&)
+
+> TRUE lorsque les deux valeurs valent true.
+
+```js
+var a1 = true && true; // t && t renvoie true
+var a2 = true && false; // t && f renvoie false
+var a3 = false && true; // f && t renvoie false
+var a4 = false && 3 == 4; // f && f renvoie false
+var a5 = "Chat" && "Chien"; // t && t renvoie Chien
+var a6 = false && "Chat"; // f && t renvoie false
+var a7 = "Chat" && false; // t && f renvoie false
+```
+
+### OU logique (||)
+
+> TRUE lorsque au moins une des valeurs vaut true.
+
+```js
+var o1 = true || true; // t || t renvoie true
+var o2 = false || true; // f || t renvoie true
+var o3 = true || false; // t || f renvoie true
+var o4 = false || 3 == 4; // f || f renvoie false
+var o5 = "Chat" || "Chien"; // t || t renvoie Chat
+var o6 = false || "Chat"; // f || t renvoie Chat
+var o7 = "Chat" || false; // t || f renvoie Chat
+```
+
+### NON logique (!)
+
+> TRUE si vaut false, FALSE si vaut true. Renvoie l'inverse de la valeur booléenne actuelle.
+
+```js
+var n1 = !true; // !t renvoie false
+var n2 = !false; // !f renvoie true
+var n3 = !"Chat"; // !t renvoie false
+```
 
 ## Les Opérateurs Logique
 
