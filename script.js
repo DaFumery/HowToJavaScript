@@ -1,16 +1,30 @@
 const mathys = {
   prenom: "Mathys",
   nomDeFamille: "Fumery",
-  age: 2022 - 1997,
+  age: 1997,
   job: "développeur",
   amis: ["Toto", "Tati", "Tata"],
+  permis: true,
+
+  // Function expression
+  calcAge: function (anneeNaissance) {
+    return 2022 - anneeNaissance;
+  },
+
+  // Function utilisant this keyword
+  calcAgeThis: function () {
+    console.log(this);
+    return 2022 - this.age;
+  },
 };
 
-console.log(mathys); // { prenom: 'Mathys', nomDeFamille: 'Fumery', age: 25, job: 'développeur', amis: [ 'Toto', 'Tati', 'Tata' ] }
+// Dot notation
+console.log(mathys.calcAge(1997)); // 25
+console.log(mathys.calcAge(mathys.age)); // 25
 
-console.log(mathys.nomDeFamille); // Fumery
-console.log(mathys["nomDeFamille"]); // Fumery
+// Bracket notation
+console.log(mathys["calcAge"](1997)); // 25
+console.log(mathys["calcAge"](mathys.age));
 
-const nomCle = "nom";
-console.log(mathys["pre" + nomCle]); // Mathys
-console.log(mathys[nomCle + "DeFamille"]); // Fumery
+// This keyword
+console.log(mathys.calcAgeThis()); // 25
