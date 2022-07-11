@@ -32,8 +32,12 @@
     - [Définition de type coercition](#définition-de-type-coercition)
     - [Autre exemple](#autre-exemple)
 - [Les Valeurs True et False](#Les-Valeurs-True-et-False)
+  - [Définition de Booléen](#définition-de-booléen)
 - [Les Opérateurs d'égalité](#Les-Opérateurs-d'égalité)
-- [La Logique Booléenne](#La-Logique-Booléenne)
+  - [Définitions des opérateurs d'égalité](#définitions-des-opérateurs-dégalité)
+    - [Égalité stricte](#égalité-stricte)
+    - [Égalité simple](#égalité-simple)
+- [La Logique Booléenne](#la-Logique-Booléenne)
 - [Les Opérateurs Logique](#Les-Opérateurs-Logique)
 - [La Condition Switch](#La-Condition-Switch)
 - [Les Opérateurs Ternaires](#Les-Opérateurs-Ternaires)
@@ -845,6 +849,36 @@ if (taille) {
 ```
 
 ## Les Opérateurs d'égalité
+
+JavaScript fournit trois opérations permettant de comparer des valeurs :
+
+- **L'égalité stricte** (ou identité) utilisant ===
+- **L'égalité faible** utilisant ==
+- **Object.is** (ajouté avec ECMAScript 2015).
+
+### Définitions des opérateurs d'égalité
+
+- **L'égalité faible (==) effectuera une conversion** des deux éléments à comparer avant d'effectuer la comparaison
+- **L'égalité stricte (===) effectuera la même comparaison mais sans conversion préalable** (elle renverra toujours false si les types des deux valeurs comparées sont différents)
+- Object.is() se comportera comme l'égalité stricte sauf pour les valeurs NaN, -0 et +0 : pour Object.is(), -0 et +0 seront différents mais on aura Object.is(NaN, NaN) qui sera true.
+
+#### Égalité stricte
+
+```js
+// Egalité stricte
+const age = "18";
+if (age === 18)
+  console.log("Tu es maintenant un adulte dépréssif (égalité stricte)"); // Condition non remplie
+```
+
+#### Égalité simple
+
+```js
+// Egalité faible
+if (age == 18)
+  console.log("Tu es maintenant un adulte dépréssif (égalité simple)");
+// Tu es maintenant un adulte dépréssif (égalité simple)
+```
 
 ## La Logique Booléenne
 
