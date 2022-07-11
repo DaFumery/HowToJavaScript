@@ -36,6 +36,12 @@
     - [Méthode includes()](#méthode-includes)
     - [Méthode indexOf()](#méthode-indexof)
   - [Exemples de manipulations](#exemple-de-manipulations)
+- [Les Objets](#les-objets)
+  - [Définition d'un Objet](#définition-dun-objet)
+  - [Les Méthodes d'Objet](#les-méthodes-dobjet)
+  - [Différences entre la notation en point et en crochet](#différences-entre-la-notation-en-point-et-en-crochet)
+    - [La notation en Point](#la-notation-en-point-dot-notation)
+    - [La notation en Crochet](#la-notation-en-crochet-bracket-notation)
 
 ## Strict Mode
 
@@ -326,3 +332,46 @@ console.log(ami.includes("Tata")); // true
 console.log(ami.indexOf("Toto")); // 0
 console.log(ami.indexOf("Tata")); // 2
 ```
+
+## Les Objets
+
+### Définition d'un Objet
+
+Un objet est un ensemble de propriétés et une propriété est une association entre un nom (aussi appelé clé) et une valeur.
+
+La valeur d'une propriété peut être une fonction, auquel cas la propriété peut être appelée « méthode ».
+
+En plus des objets natifs fournis par l'environnement, il est possible de construire ses propres objets.
+
+### Les Méthodes d'Objet
+
+### Différences entre la notation en point et en crochet
+
+#### La notation en Point (Dot Notation)
+
+> obtenir = objet.propriété;
+> objet.propriété = définir;
+
+1. Les identifiants de propriétés peuvent uniquement être en caractères alphanumérique (\_ et $)
+2. Les identifiants de propriétés ne peuvent pas commencer par un nombre.
+3. Les identifiants de propriétés ne peuvent pas contenir de variables.
+
+OK
+
+> obj.prop_1 OU obj.prop$
+
+PAS OK
+
+> obj.1prop OU obj.prop name
+
+#### La notation en Crochet (Bracket notation)
+
+> obtenir = objet[nom_de_propriété];
+> objet[nom_de_propriété] = définir;
+
+1. Les identifiants de propriétés sont obligatoirement des Strings ou une variable référençant un String
+2. On peut utiliser des variables, des espaces et des Strings commençant par des nombres.
+
+OK
+
+> obj["1prop"] OU obj["prop name"]

@@ -1,24 +1,16 @@
-const ami = ["Toto", "Tati", "Tata"];
-console.log(ami);
+const mathys = {
+  prenom: "Mathys",
+  nomDeFamille: "Fumery",
+  age: 2022 - 1997,
+  job: "développeur",
+  amis: ["Toto", "Tati", "Tata"],
+};
 
-// Ajouter des élements
-ami.push("Sullivan"); // A la fin
-console.log(ami); // [ 'Toto', 'Tati', 'Tata', 'Sullivan' ]
+console.log(mathys); // { prenom: 'Mathys', nomDeFamille: 'Fumery', age: 25, job: 'développeur', amis: [ 'Toto', 'Tati', 'Tata' ] }
 
-ami.unshift("John"); // Au Début
-console.log(ami); // [ 'John', 'Toto', 'Tati', 'Tata', 'Sullivan' ]
+console.log(mathys.nomDeFamille); // Fumery
+console.log(mathys["nomDeFamille"]); // Fumery
 
-// Retirer des éléments
-ami.pop(); // Le dernier élément
-console.log(ami); // [ 'John', 'Toto', 'Tati', 'Tata' ]
-
-ami.shift(); // Le premier élément
-console.log(ami); // [ 'Toto', 'Tati', 'Tata' ]
-
-// Retourne true ou false si la valeur existe
-console.log(ami.includes("Steven")); // false
-console.log(ami.includes("Tata")); // true
-
-// Retourne l'indice de la première occurence de la valeur
-console.log(ami.indexOf("Toto")); // 0
-console.log(ami.indexOf("Tata")); // 2
+const nomCle = "nom";
+console.log(mathys["pre" + nomCle]); // Mathys
+console.log(mathys[nomCle + "DeFamille"]); // Fumery
