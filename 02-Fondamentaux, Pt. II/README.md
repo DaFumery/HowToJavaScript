@@ -21,6 +21,21 @@
     - [Trois manières de déclarer une fonction](#trois-manières-de-déclarer-une-fonction)
     - [Anatomie d'une fonction](#anatomie-dune-fonction)
 - [Les Tableaux](#les-tableaux)
+  - [Définition d'un Tableau](#définition-dun-tableau)
+  - [Créer un tableau](#créer-un-tableau)
+    - [Exemple de création de tableau](#exemple-de-création-de-tableau)
+    - [Exercice tableaux](#exercice-tableaux)
+- [Manipulation Basics d'un Tableau](#manipulation-basics-dun-tableau)
+  - [Ajouter un élément](#ajouter-un-élément)
+    - [Méthode unshift()](#méthode-unshift-au-début)
+    - [Méthode push()](#méthode-push-à-la-fin)
+  - [Supprimer un élément](#supprimer-un-élément)
+    - [Méthode shift()](#méthode-shift-au-début)
+    - [Méthode pop()](#méthode-pop-à-la-fin)
+  - [Recherche d'éléments](#recherche-déléments)
+    - [Méthode includes()](#méthode-includes)
+    - [Méthode indexOf()](#méthode-indexof)
+  - [Exemples de manipulations](#exemple-de-manipulations)
 
 ## Strict Mode
 
@@ -215,6 +230,7 @@ console.log(mathys[4][0]); // Toto
 #### Exercice tableaux
 
 Appliquer une fonction calcAge aux valeurs d'index[0], d'index[3] et à la dernière valeur du tableau annees.
+
 Créer un nouveau tableau ageReturn avec le résultat de la fonction calcAge()
 
 ```js
@@ -236,4 +252,77 @@ const ageReturn = [
 ];
 
 console.log(ageReturn); // [ 25, 22, 20 ]
+```
+
+## Manipulation Basics d'un Tableau
+
+### Ajouter un élément
+
+#### Méthode unshift() au début
+
+**La méthode unshift() ajoute un ou plusieurs éléments au début d'un tableau** et renvoie la nouvelle longueur du tableau.
+
+> array.unshift(element1, element2, elementN)
+
+#### Méthode push() à la fin
+
+**La méthode push() ajoute un ou plusieurs éléments à la fin d'un tableau** et retourne la nouvelle taille du tableau.
+
+> array.push(element1, element2, elementN)
+
+### Supprimer un élément
+
+#### Méthode shift() au début
+
+**La méthode shift() permet de retirer le premier élément d'un tableau** et de renvoyer cet élément. Cette méthode modifie la longueur du tableau.
+
+> array.shift()
+
+#### Méthode pop() à la fin
+
+**La méthode pop() supprime le dernier élément d'un tableau** et retourne cet élément. Cette méthode modifie la longueur du tableau.
+
+> array.pop()
+
+### Recherche d'éléments
+
+#### Méthode includes()
+
+**La méthode includes() permet de déterminer si un tableau contient une valeur** et renvoie true si c'est le cas, false sinon.
+
+> array.includes(élémentRecherché)
+
+#### Méthode indexOf()
+
+**La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau**. Si l'élément cherché n'est pas présent dans le tableau, la méthode renverra -1.
+
+> arr.indexOf(élémentRecherché)
+
+### Exemple de manipulations
+
+```js
+const ami = ["Toto", "Tati", "Tata"];
+console.log(ami);
+
+// Ajouter des élements
+ami.push("Sullivan"); // A la fin
+console.log(ami); // [ 'Toto', 'Tati', 'Tata', 'Sullivan' ]
+
+ami.unshift("John"); // Au Début
+console.log(ami); // [ 'John', 'Toto', 'Tati', 'Tata', 'Sullivan' ]
+
+// Retirer des éléments
+ami.pop(); // Le dernier élément
+console.log(ami); // [ 'John', 'Toto', 'Tati', 'Tata' ]
+
+ami.shift(); // Le premier élément
+console.log(ami); // [ 'Toto', 'Tati', 'Tata' ]
+
+// Retourne true ou false si la valeur existe
+console.log(ami.includes("Steven")); // false
+console.log(ami.includes("Tata")); // true
+
+// Retourne l'indice de la première occurence de la valeur
+console.log(ami.indexOf("Toto")); // 0
+console.log(ami.indexOf("Tata")); // 2
 ```

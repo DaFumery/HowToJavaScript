@@ -1,18 +1,24 @@
-const calcAge = function (anneeNaissance) {
-  return 2022 - anneeNaissance;
-};
+const ami = ["Toto", "Tati", "Tata"];
+console.log(ami);
 
-const annees = [1997, 1998, 1999, 2000, 2001, 2002];
+// Ajouter des élements
+ami.push("Sullivan"); // A la fin
+console.log(ami); // [ 'Toto', 'Tati', 'Tata', 'Sullivan' ]
 
-const age1 = calcAge(annees[0]);
-const age2 = calcAge(annees[3]);
-const age3 = calcAge(annees[annees.length - 1]);
-console.log(age1, age2, age3); // 25 22 20
+ami.unshift("John"); // Au Début
+console.log(ami); // [ 'John', 'Toto', 'Tati', 'Tata', 'Sullivan' ]
 
-const ageReturn = [
-  calcAge(annees[0]),
-  calcAge(annees[3]),
-  calcAge(annees[annees.length - 1]),
-];
+// Retirer des éléments
+ami.pop(); // Le dernier élément
+console.log(ami); // [ 'John', 'Toto', 'Tati', 'Tata' ]
 
-console.log(ageReturn);
+ami.shift(); // Le premier élément
+console.log(ami); // [ 'Toto', 'Tati', 'Tata' ]
+
+// Retourne true ou false si la valeur existe
+console.log(ami.includes("Steven")); // false
+console.log(ami.includes("Tata")); // true
+
+// Retourne l'indice de la première occurence de la valeur
+console.log(ami.indexOf("Toto")); // 0
+console.log(ami.indexOf("Tata")); // 2
