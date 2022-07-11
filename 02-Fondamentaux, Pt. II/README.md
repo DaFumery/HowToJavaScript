@@ -39,6 +39,8 @@
 - [Les Objets](#les-objets)
   - [Définition d'un Objet](#définition-dun-objet)
   - [Les Méthodes d'Objet](#les-méthodes-dobjet)
+    - [Créer une méthode d'Objet](#créer-une-méthode-dobjet)
+    - [L'Opérateur this](#lopérateur-this)
   - [Différences entre la notation en point et en crochet](#différences-entre-la-notation-en-point-et-en-crochet)
     - [La notation en Point](#la-notation-en-point-dot-notation)
     - [La notation en Crochet](#la-notation-en-crochet-bracket-notation)
@@ -345,6 +347,8 @@ En plus des objets natifs fournis par l'environnement, il est possible de constr
 
 ### Les Méthodes d'Objet
 
+#### Créer une méthode d'Objet
+
 ```js
 const mathys = {
   prenom: "Mathys",
@@ -435,7 +439,3 @@ console.log(mathys.getResume());
 > obtenir = objet[nom_de_propriété];
 
 > objet[nom_de_propriété] = définir;
-
-```
-
-```
