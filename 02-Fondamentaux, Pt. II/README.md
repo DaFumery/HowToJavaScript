@@ -6,13 +6,22 @@
   - [Définition du Strict Mode](#définition-du-strict-mode)
   - [A quoi ça sert?](#a-quoi-ça-sert)
   - [Invoquer le Strict Mode](#invoquer-le-strict-mode)
+- [Les Fonctions](#les-fonctions)
+  - [Définition d'une Fonction](#définition-dune-fonction)
+  - [La déclaration de Fonction](#la-déclaration-de-fonction)
+    - [Exemple de déclaration de Fonction](#exemple-de-déclaration-de-fonction)
+  - [L'expression de Fonction](#lexpression-de-fonction)
+    - [Exemple d'expression de Fonction](#exemple-dexpression-de-fonction)
+  - [Les Fonctions fléchées]()
+    - [Exemple de Fonction fléchée]()
 
 ## Strict Mode
 
 ### Définition du Strict Mode
 
 Le mode strict de ECMAScript 5 permet de choisir une variante restrictive de JavaScript. Le mode strict n'est pas seulement un sous-ensemble de JavaScript : il possède intentionnellement des sémantiques différentes du code normal.
-Il permet de réaliser des scripts plus sécurisés en évitant les erreurs accidentelles.
+
+**Il permet de réaliser des scripts plus sécurisés en évitant les erreurs accidentelles.**
 
 ### A quoi ça sert?
 
@@ -24,9 +33,83 @@ Il permet de réaliser des scripts plus sécurisés en évitant les erreurs acci
 
 ### Invoquer le Strict Mode
 
+En début de strict ou dans un bloc.
+
 > "use strict";
 
 ```js
 "use strict";
 var v = "Je suis en mode strict !";
+```
+
+## Les Fonctions
+
+### Définition d'une Fonction
+
+Les fonctions font partie des briques fondamentales de JavaScript. Une fonction est une procédure JavaScript, un ensemble d'instructions effectuant une tâche ou calculant une valeur. Afin d'utiliser une fonction, il est nécessaire de l'avoir auparavant définie au sein de la portée dans laquelle on souhaite l'appeler.
+
+### La déclaration de Fonction
+
+Une définition de fonction (aussi appelée déclaration de fonction ou instruction de fonction) est construite avec **le mot-clé function**, suivi par :
+
+- Le nom de la fonction.
+- Une liste d'arguments à passer à la fonction, entre parenthèses et séparés par des virgules.
+- Les instructions JavaScript définissant la fonction, entre accolades, { }.
+
+#### Exemple de déclaration de Fonction
+
+```js
+// Déclaration de fonction sous le nom fruitMxer de paramètres (pommes, oranges, bananes)
+function fruitMixerDeclaration(pommes, oranges, bananes) {
+  console.log(pommes, oranges, bananes);
+  const monJuJuOnDaBeat = `Mon Juju avec ${pommes} pomme(s), ${oranges} orange(s) et ${bananes} banane(s).`;
+  return monJuJuOnDaBeat;
+}
+
+const monJujuDePomme = fruitMixerDeclaration(5, 0, 0);
+console.log(monJujuDePomme); // Mon Juju avec 5 pomme(s), 0 orange(s) et 0 banane(s).
+
+const monJujuMultifruit = fruitMixerDeclaration(3, 3, 5);
+console.log(monJujuMultifruit); // Mon Juju avec 3 pomme(s), 3 orange(s) et 5 banane(s).
+```
+
+### L'expression de Fonction
+
+Une expression de fonction fonctionne exactement comme une déclaration de fonction ou une instruction de fonction, la seule différence est qu’elle est stockée dans une variable et donc qu'il n'y a pas de nom de fonction dans une expression de fonction, **c’est-à-dire que des fonctions anonymes sont créées dans des expressions de fonction**. Les expressions de fonction s’exécutent dès qu’elles sont définies.
+
+**L’omission d’un nom est autorisée pour les fonctions expressions.**
+
+#### Exemple d'expression de Fonction
+
+```js
+// Expression de fonction stockée dans la variable fruitMixerExpression de paramètres (pommes, oranges, bananes)
+const fruitMixerExpression = function (pommes, oranges, bananes) {
+  const monJuJuOnDaBeat = `Mon Juju avec ${pommes} pomme(s), ${oranges} orange(s) et ${bananes} banane(s).`;
+  return monJuJuOnDaBeat;
+};
+
+const monJujuDePomme = fruitMixerExpression(5, 0, 0);
+console.log(monJujuDePomme); // Mon Juju avec 5 pomme(s), 0 orange(s) et 0 banane(s).
+
+const monJujuMultifruit = fruitMixerExpression(3, 3, 5);
+console.log(monJujuMultifruit); // Mon Juju avec 3 pomme(s), 3 orange(s) et 5 banane(s).
+```
+
+### Les Fonctions fléchées
+
+Une expression de fonction fléchée (arrow function en anglais) permet d’avoir une syntaxe plus courte que les expressions de fonction et **ne possède pas ses propres valeurs pour this, arguments, super, ou new.target**. Les fonctions fléchées sont **souvent anonymes** et ne sont **pas destinées à être utilisées pour déclarer des méthodes**.
+
+### Exemple de Fonction fléchée
+
+```js
+const fruitMixerFlechee = (pommes, oranges, bananes) => {
+  const monJuJuOnDaBeat = `Mon Juju avec ${pommes} pomme(s), ${oranges} orange(s) et ${bananes} banane(s).`;
+  return monJuJuOnDaBeat;
+};
+
+const monJujuDePomme = fruitMixerFlechee(5, 0, 0);
+console.log(monJujuDePomme); // Mon Juju avec 5 pomme(s), 0 orange(s) et 0 banane(s).
+
+const monJujuMultifruit = fruitMixerFlechee(3, 3, 5);
+console.log(monJujuMultifruit); // Mon Juju avec 3 pomme(s), 3 orange(s) et 5 banane(s).
 ```
