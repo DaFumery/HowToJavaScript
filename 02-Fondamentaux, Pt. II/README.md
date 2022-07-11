@@ -349,29 +349,19 @@ En plus des objets natifs fournis par l'environnement, il est possible de constr
 
 #### La notation en Point (Dot Notation)
 
-> obtenir = objet.propriété;
-> objet.propriété = définir;
-
 1. Les identifiants de propriétés peuvent uniquement être en caractères alphanumérique (\_ et $)
 2. Les identifiants de propriétés ne peuvent pas commencer par un nombre.
 3. Les identifiants de propriétés ne peuvent pas contenir de variables.
 
-OK
+> obtenir = objet.propriété;
 
-> obj.prop_1 OU obj.prop$
-
-PAS OK
-
-> obj.1prop OU obj.prop name
+> objet.propriété = définir;
 
 #### La notation en Crochet (Bracket notation)
-
-> obtenir = objet[nom_de_propriété];
-> objet[nom_de_propriété] = définir;
 
 1. Les identifiants de propriétés sont obligatoirement des Strings ou une variable référençant un String
 2. On peut utiliser des variables, des espaces et des Strings commençant par des nombres.
 
-OK
+> obtenir = objet[nom_de_propriété];
 
-> obj["1prop"] OU obj["prop name"]
+> objet[nom_de_propriété] = définir;
