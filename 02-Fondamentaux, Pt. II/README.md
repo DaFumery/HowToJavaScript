@@ -20,6 +20,7 @@
   - [Résumé des fonctions](#résumé-des-fonctions)
     - [Trois manières de déclarer une fonction](#trois-manières-de-déclarer-une-fonction)
     - [Anatomie d'une fonction](#anatomie-dune-fonction)
+- [Les Tableaux](#les-tableaux)
 
 ## Strict Mode
 
@@ -161,3 +162,52 @@ console.log(monJujuMultifruit);
 ### Anatomie d'une fonction
 
 ![Anatomie d'une fonction](img/Anatomie-de-fonction.png)
+
+## Les Tableaux
+
+### Définition d'un Tableau
+
+**Un tableau est un objet contenant plusieurs valeurs.** Les objets tableau peuvent être stockés dans des variables et traités de la même manière que tout autre type de valeur, la différence étant que nous pouvons accéder à chaque valeur du tableau individuellement, et faire des choses super utiles et efficaces avec la liste des valeurs, comme boucler et faire la même chose pour chaque valeur.
+
+### Créer un tableau
+
+On définit les valeurs d'un tableau par une liste d'éléments entre crochets droits, séparés par des virgules.
+
+> let tableau = [];
+
+OU
+
+> let tableau = new Array();
+
+#### Exemple de création de tableau
+
+```js
+const prenom = "Mathys";
+const ami = ["Toto", "Tati", "Tata"];
+const annees = new Array(1997, 1996, 2001, 2002, 2008);
+const mathys = [prenom, "Fumery", 2022 - 1997, "développeur", ami];
+
+console.log(ami); // [ 'Toto', 'Tati', 'Tata' ]
+console.log(annees); // [ 1997, 1996, 2001, 2002, 2008 ]
+console.log(mathys); // [ 'Mathys', 'Fumery', 25, 'développeur', [ 'Toto', 'Tati', 'Tata' ] ]
+
+// Renvoie la valeur d'index[0] et d'index[1] du tableau ami
+console.log(ami[0]); // "Toto"
+console.log(ami[1]); // "Tati"
+
+// Renvoie la longueur du tableau
+console.log(ami.length); // 3 (car 3 éléments)
+
+// Renvoie la valeur d'index[3 - 1] = index[2]
+console.log(ami[ami.length - 1]); // Tata
+
+// Remplace la valeur d'index 2 du tableau ami
+ami[2] = "Sullivan";
+console.log(ami); // [ 'Toto', 'Tati', 'Sullivan' ]
+
+// Accède au tableau ami intégré dans le tableau mathys
+console.log(mathys[4]); // [ 'Toto', 'Tati', 'Sullivan' ]
+
+// Accède à la valeur d'index0 du tableau ami intégré dans le tableau Mathys
+console.log(mathys[4][0]); // Toto
+```

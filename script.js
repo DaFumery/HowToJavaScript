@@ -1,21 +1,28 @@
-function couperLesFruits(fruit) {
-  return fruit * 4;
-}
+const prenom = "Mathys";
+const ami = ["Toto", "Tati", "Tata"];
+const annees = new Array(1997, 1996, 2001, 2002, 2008);
+const mathys = [prenom, "Fumery", 2022 - 1997, "développeur", ami];
 
-function fruitMixerFlechee(pommes, oranges, bananes) {
-  // Callback
-  const morceauDePommes = couperLesFruits(pommes);
-  const morceauOranges = couperLesFruits(oranges);
-  const morceauDeBananes = couperLesFruits(bananes);
+console.log(ami); // [ 'Toto', 'Tati', 'Tata' ]
+console.log(annees); // [ 1997, 1996, 2001, 2002, 2008 ]
+console.log(mathys); // [ 'Mathys', 'Fumery', 25, 'développeur', [ 'Toto', 'Tati', 'Tata' ] ]
 
-  const monJuJuOnDaBeat = `Mon Juju avec ${morceauDePommes} morceaux de pomme(s), ${morceauOranges} morceaux de orange(s) et ${morceauDeBananes} morceaux de banane(s).`;
-  return monJuJuOnDaBeat;
-}
+// Renvoie la valeur d'index[0] et d'index[1]
+console.log(ami[0]); // "Toto"
+console.log(ami[1]); // "Tati"
 
-const monJujuDePomme = fruitMixerFlechee(5, 0, 0);
-console.log(monJujuDePomme);
-// Mon Juju avec 20 morceaux de pomme(s), 0 morceaux de orange(s) et 0 morceaux de banane(s).
+// Renvoie la longueur du tableau
+console.log(ami.length); // 3 (car 3 éléments)
 
-const monJujuMultifruit = fruitMixerFlechee(3, 3, 5);
-console.log(monJujuMultifruit);
-// Mon Juju avec 12 morceaux de pomme(s), 12 morceaux de orange(s) et 20 morceaux de banane(s).
+// Renvoie la valeur d'index[3 - 1] = index[2]
+console.log(ami[ami.length - 1]); // Tata
+
+// Remplace la valeur d'index 2 du tableau ami
+ami[2] = "Sullivan";
+console.log(ami); // [ 'Toto', 'Tati', 'Sullivan' ]
+
+// Accède au tableau ami intégré dans le tableau mathys
+console.log(mathys[4]); // [ 'Toto', 'Tati', 'Sullivan' ]
+
+// Accède à la valeur d'index0 du tableau ami intégré dans le tableau Mathys
+console.log(mathys[4][0]); // Toto
