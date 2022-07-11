@@ -48,6 +48,12 @@
   - [La Boucle While](#la-boucle-while)
   - [La Boucle For](#la-boucle-for)
   - [Looping d'un tableau]()
+    - [Boucle For](#boucle-for)
+      - [Exemple 1](#exemple-1)
+      - [Exemple 2](#exemple-2)
+    - [Continue & Break](#continue--break)
+    - [Looping à l'envers](#looping-à-lenvers)
+    - [Loop in Loop](#loop-in-loop)
 
 ## Strict Mode
 
@@ -481,6 +487,10 @@ for (let rep = 1; rep <= 10; rep++) {
 
 ### Looping d'un tableau
 
+### Boucle For
+
+#### Exemple 1
+
 ```js
 const mathys = [
   "Mathys",
@@ -506,5 +516,90 @@ for (let i = 0; i < mathys.length; i++) {
   types.push(typeof mathys[i]);
 }
 
-console.log(types); // [ 'string', 'string', 'number', 'string', 'object', 'boolean' ]
+console.log(types);
+// [ 'string', 'string', 'number', 'string', 'object', 'boolean' ]
+```
+
+### Exemple 2
+
+```js
+const annees = [1991, 1997, 2002, 2008];
+const ages = [];
+
+for (let i = 0; i < annees.length; i++) {
+  ages.push(2022 - annees[i]);
+}
+console.log(ages); // [ 31, 25, 20, 14 ]
+```
+
+### Continue & Break
+
+L'instruction continue arrête l'exécution des instructions pour l'itération de la boucle courante ou de la boucle étiquetée. L'exécution est reprise à l'itération suivante.
+
+```js
+const mathys = [
+  "Mathys",
+  "Fumery",
+  2022 - 1997,
+  "Développeur",
+  ["Toto", "Tati", "Tata"],
+  true,
+];
+
+// Continue & Break
+
+for (let i = 0; i < mathys.length; i++) {
+  if (typeof mathys[i] !== "string") continue;
+  console.log(mathys[i], typeof mathys[i]);
+}
+
+// Mathys string
+// Fumery string
+// Développeur string
+```
+
+### Looping à l'envers
+
+```js
+const mathys = [
+  "Mathys",
+  "Fumery",
+  2022 - 1997,
+  "Développeur",
+  ["Toto", "Tati", "Tata"],
+  true,
+];
+
+// Looping à l'envers
+
+for (let i = mathys.length - 1; i >= 0; i--) {
+  console.log(i, mathys[i]);
+}
+//5 true
+// 4 [ 'Toto', 'Tati', 'Tata' ]​
+// 3 'Développeur'​
+// 2 25​
+// 1 'Fumery'​
+// 0 'Mathys'​
+```
+
+### Loop in Loop
+
+```js
+for (let exercice = 1; exercice < 4; exercice++) {
+  console.log(`--------------- Début de l'exercice ${exercice}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Soulever de la fonte répétition numéro ${rep}`);
+  }
+}
+
+// --------------- Début de l'exercice 1
+// Soulever de la fonte répétition numéro 1
+// ...
+// Soulever de la fonte répétition numéro 5
+// --------------- Début de l'exercice 2
+// Soulever de la fonte répétition numéro 1
+// ...
+// Soulever de la fonte répétition numéro 5
 ```

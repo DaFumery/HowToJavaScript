@@ -1,25 +1,16 @@
-const mathys = [
-  "Mathys",
-  "Fumery",
-  2022 - 1997,
-  "Développeur",
-  ["Toto", "Tati", "Tata"],
-  true,
-];
+for (let exercice = 1; exercice < 4; exercice++) {
+  console.log(`--------------- Début de l'exercice ${exercice}`);
 
-const types = [];
-
-for (let i = 0; i < mathys.length; i++) {
-  //Lecture du tableau mathys
-  console.log(mathys[i], typeof mathys[i]);
-  // Mathys string
-  // Fumery string
-  // 25 number
-  // ...
-  // true boolean
-
-  // Remplir le tableau types
-  types.push(typeof mathys[i]);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Soulever de la fonte répétition numéro ${rep}`);
+  }
 }
 
-console.log(types); // [ 'string', 'string', 'number', 'string', 'object', 'boolean' ]
+// --------------- Début de l'exercice 1
+// Soulever de la fonte répétition numéro 1
+// ...
+// Soulever de la fonte répétition numéro 5
+// --------------- Début de l'exercice 2
+// Soulever de la fonte répétition numéro 1
+// ...
+// Soulever de la fonte répétition numéro 5
