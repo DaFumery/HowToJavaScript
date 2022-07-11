@@ -1,4 +1,4 @@
-# JavaScript Fondamentales, Pt. 2
+# JavaScript Fondamentaux, Pt. 2
 
 ## Table des matières
 
