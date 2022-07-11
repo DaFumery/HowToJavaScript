@@ -47,6 +47,7 @@
   - [Exemple de switch](#exemple-de-switch)
 - [Les Opérateurs Ternaires](#Les-Opérateurs-Ternaires)
   - [Définition de l'opérateur Ternaire](#définition-de-lopérateur-ternaire)
+  - [Exemple de ternaire](#exemple-de-ternaire)
 
 ## Hello World!
 
@@ -993,6 +994,8 @@ switch (jour) {
 ### Définition de l'opérateur Ternaire
 
 **L'opérateur (ternaire) conditionnel est le seul opérateur JavaScript qui comporte trois opérandes.** Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration de Instructions/if...else.
+
+### Exemple de Ternaire
 
 ```js
 const age = 25;
