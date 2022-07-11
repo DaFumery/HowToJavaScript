@@ -21,7 +21,11 @@
 - [Précédence des Opérateurs](#Précédence-des-Opérateurs)
   - [Classement des précédences des opérateurs](#classement-des-précédences-des-opérateurs-du-plus-haut-au-plus-bas)
 - [Les Templates Literals](#Les-Templates-Literals)
+  - [Définition de Template Literal](#définition-de-template-literal)
+  - [Exemple de Template Literal](#exemple-de-template-literal)
 - [La Condition If / Else](#la-condition-if--else)
+  - [Définition de la condition if/Else](#définition-de-la-condition-ifelse)
+  - [Exemple de condition if/Else](#exemple-de-condition-ifelse)
 - [La Conversion et Coercition de typage](#la-conversion-et-Coercition-de-typage)
   - [Type Conversion](#type-conversion)
     - [Définition de type conversion](#définition-de-type-conversion)
@@ -679,6 +683,8 @@ console.log(x); // 3
 
 Les templates Literals sont des littéraux de chaînes de caractères permettant d'intégrer des expressions.
 
+### Exemple de template Literal
+
 ```js
 const prenom = "Mathys";
 const travail = "développeur";
@@ -694,7 +700,11 @@ console.log(mathys);
 
 ## La Condition If / Else
 
+### Définition de la condition if/Else
+
 L'instruction if exécute une instruction si une condition donnée est vraie ou équivalente à vrai. Si la condition n'est pas vérifiée, il est possible d'utiliser une autre instruction.
+
+### Exemple de condition if/Else
 
 ```js
 const age = 17;
