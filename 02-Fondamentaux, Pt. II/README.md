@@ -12,8 +12,8 @@
     - [Exemple de déclaration de Fonction](#exemple-de-déclaration-de-fonction)
   - [L'expression de Fonction](#lexpression-de-fonction)
     - [Exemple d'expression de Fonction](#exemple-dexpression-de-fonction)
-  - [Les Fonctions fléchées]()
-    - [Exemple de Fonction fléchée]()
+  - [Les Fonctions fléchées](#les-fonctions-fléchées)
+    - [Exemple de Fonction fléchée](#exemple-de-fonction-fléchée)
 
 ## Strict Mode
 
@@ -99,7 +99,7 @@ console.log(monJujuMultifruit); // Mon Juju avec 3 pomme(s), 3 orange(s) et 5 ba
 
 Une expression de fonction fléchée (arrow function en anglais) permet d’avoir une syntaxe plus courte que les expressions de fonction et **ne possède pas ses propres valeurs pour this, arguments, super, ou new.target**. Les fonctions fléchées sont **souvent anonymes** et ne sont **pas destinées à être utilisées pour déclarer des méthodes**.
 
-### Exemple de Fonction fléchée
+#### Exemple de Fonction fléchée
 
 ```js
 const fruitMixerFlechee = (pommes, oranges, bananes) => {
