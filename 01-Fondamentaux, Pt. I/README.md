@@ -791,17 +791,58 @@ console.log(n1); // "111"
 console.log(typeof n1); // string
 
 // La présence du (- 1) permet à JS de convertir automatiquement le string en number
-n1 = n1 - 1;
+n1 = n1 - 1; // "111" - 1
 console.log(n1); // 110
 console.log(typeof n1); // number
 
 // La présence du (- 2) permet à JS de convertir automatiquement le string en number
-let n2 = "1" + 1 - 2;
+let n2 = "1" + 1 - 2; // "11" - 2
 console.log(n2); // 9
 console.log(typeof n2); // number
 ```
 
 ## Les Valeurs True et False
+
+### Définition de Booléen
+
+La valeur passée en premier paramètre est, si nécessaire, convertie en valeur booléenne.
+
+Si la valeur est omise ou est 0, -0, null, false, NaN, undefined ou une chaîne de caractères vide (""), l'objet a une valeur initiale de false (faux).
+
+Toutes les autres valeurs, y compris n'importe quel objet, un tableau vide ([]), ou une chaîne de caractères "false", créent un objet avec une valeur initiale de true (vrai).
+
+```js
+let typeNumber0 = 0;
+let typeNumber1 = 1;
+let typeUndefined;
+let typeString = "Mathys";
+let typeObject = {};
+let typeStringVide = "";
+
+// La Méthode Boolean() permet de convertir une valeur en valeur Booléenne
+console.log(Boolean(typeNumber0)); // false
+console.log(Boolean(typeNumber1)); // true
+console.log(Boolean(typeUndefined)); // false
+console.log(Boolean(typeString)); // true
+console.log(Boolean(typeObject)); // true
+console.log(Boolean(typeStringVide)); // false
+
+const argent = 100; // argent = true
+if (argent) {
+  console.log("Donne ta tune à Charles Hoskinson");
+} else {
+  console.log("Comment il va se nourrir Charlie?");
+}
+// Donne ta tune à Charles Hoskinson
+
+let taille; // taille = false (undefined)
+if (taille) {
+  console.log("Tu as défini ta taille");
+} else {
+  console.log("Tu n'as pas défini ta taille");
+}
+// Tu n'as pas défini ta taille
+```
 
 ## Les Opérateurs d'égalité
 

@@ -1,24 +1,29 @@
-// La valeur 25 de type nombre et automatiquement converti en string lors de la concaténation
-const coercition1 = "J'ai " + 25 + " ans";
-console.log(coercition1); // "J'ai 25 ans"
-const coercition2 = "J'ai " + "25" + " ans";
-console.log(coercition2); // "J'ai 25 ans"
-const coercition3 = "23" * "2";
-console.log(coercition3); // 46
+let typeNumber0 = 0;
+let typeNumber1 = 1;
+let typeUndefined;
+let typeString = "Mathys";
+let typeObject = {};
+let typeStringVide = "";
 
-console.log(typeof coercition1); // string
-console.log(typeof coercition2); // string
-console.log(typeof coercition3); // number
+console.log(Boolean(typeNumber0)); // false
+console.log(Boolean(typeNumber1)); // true
+console.log(Boolean(typeUndefined));
+console.log(Boolean(typeString)); // true
+console.log(Boolean(typeObject)); // true
+console.log(Boolean(typeStringVide)); // false
 
-let n1 = "1" + 1 + 1;
-console.log(n1); // "111"
-console.log(typeof n1); // string
+const argent = 100;
+if (argent) {
+  console.log("Donne ta tune à Charles Hoskinson");
+} else {
+  console.log("Comment il va se nourrir Charlie?");
+}
+// Donne ta tune à Charles Hoskinson
 
-n1 = n1 - 1;
-console.log(n1); // 110
-console.log(typeof n1); // number
-
-// La présence du (- 2) permet à JS de convertir automatiquement le string en number
-let n2 = "1" + 1 - 2;
-console.log(n2); // 9
-console.log(typeof n2); // number
+let taille;
+if (taille) {
+  console.log("Tu as défini ta taille");
+} else {
+  console.log("Tu n'as pas défini ta taille");
+}
+// Tu n'as pas défini ta taille
