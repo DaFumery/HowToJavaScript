@@ -13,6 +13,18 @@
   - [Single-threaded]()
   - [Non-blocking Event Loop]()
 
+## Qu'est ce que JavaScript?
+
+JavaScript (souvent abrégé en « JS ») est **un langage de script léger, orienté objet**, principalement connu comme le langage de script des pages web. Mais il est aussi utilisé dans de nombreux environnements extérieurs aux navigateurs web tels que Node.js
+
+> Le code JavaScript est interprété ou compilé à la volée (JustInTime)
+
+> C'est un langage à objets utilisant le concept de prototype
+
+> Disposant d'un typage faible et dynamique qui permet de programmer suivant plusieurs paradigmes de programmation : fonctionnelle, impérative et orientée objet.
+
+![PresentationJS](img/definition-js.png)
+
 ### High Level
 
 Tous les programmes informatiques ont besoin de ressources pour fonctionner.
@@ -63,7 +75,11 @@ On distingue **les langages Low-level et les High-Level**
 
 ### Prototype-based / Object Oriented
 
+![Prototype/OOP](img/prototype-oop.png)
+
 ### First-class Functions
+
+![FirstClass](img/First-Class.png)
 
 ### Dynamic
 
