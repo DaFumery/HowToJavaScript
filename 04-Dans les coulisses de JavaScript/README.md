@@ -75,6 +75,10 @@ On distingue **les langages Low-level et les High-Level**
 
 ### Prototype-based / Object Oriented
 
+JavaScript est souvent décrit comme un langage basé sur les prototypes, chaque objet pouvant avoir un prototype objet d'où il hérite des méthodes et des attributs.
+
+Un prototype peut lui aussi avoir son prototype objet duquel il héritera des méthodes et des attributs et ainsi de suite. On parle alors de chaîne de prototypage
+
 ![Prototype/OOP](img/prototype-oop.png)
 
 ### First-class Functions
@@ -83,6 +87,10 @@ On distingue **les langages Low-level et les High-Level**
 
 ### Dynamic
 
+![Dynamic](img/dynamic.png)
+
 ### Single-threaded
 
 ### Non-blocking Event Loop
+
+![Non-blocking Event Loop](img/Nonblockingevent.png)
