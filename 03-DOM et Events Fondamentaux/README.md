@@ -10,6 +10,16 @@
   - [Modifier un élément](#modifier-un-élément)
   - [Les événements](#les-événements)
 - [Traverser le DOM](#traverser-le-dom)
+- [Les Méthodes Math](#les-méthodes-math)
+  - [Math.random()](#mathrandom)
+  - [Math.trunc()](#mathtrunc)
+  - [Math.round()](#mathround)
+  - [Math.abs()](#mathabs)
+  - [Math.ceil()](#mathceil)
+  - [Math.floor()](#mathfloor)
+  - [Math.max(x,y,...)](#mathmaxxy)
+  - [Math.min(x,y,...)](#mathminxy)
+  - [Math.sqrt()](#mathsqrt)
 
 ## Qu'est ce que le DOM
 
@@ -116,3 +126,107 @@ element.addEventListener("click", next);
 Un document HTML n'est au final qu'un arbre d'éléments HTML et texte qu'il est possible de parcourir de différentes manières. Cet arbre est appellé le DOM.
 
 ![DOM TREE STRUCTURE](img/dom-tree-structure.png)
+
+## Les Méthodes Math
+
+### Math.random()
+
+> La fonction Math.random() renvoie un nombre flottant pseudo-aléatoire compris dans l'intervalle [0, 1[ (ce qui signifie que 0 est compris dans l'intervalle mais que 1 en est exclu)
+
+```js
+console.log(Math.random()); // 0.18
+console.log(Math.random()); // 0.94
+```
+
+On peut combiner plusieurs méthodes Math()
+
+```js
+console.log(Math.round(Math.random() * 20)); // 13
+console.log(Math.trunc(Math.random() * 20)); // 8
+```
+
+### Math.round()
+
+> La fonction Math.round() retourne la valeur d'un nombre arrondi à l'entier le plus proche.
+
+```js
+console.log(Math.round(5.1)); // 5
+console.log(Math.round(5.9)); // 6
+console.log(Math.round(6.1)); // 6
+console.log(Math.round(3.141592653589793)); // 3
+```
+
+### Math.trunc()
+
+> La fonction Math.trunc() retourne la troncature entière d'un nombre en retirant sa partie décimale.
+
+```js
+console.log(Math.trunc(5.1)); // 5
+console.log(Math.trunc(5.9)); // 5
+console.log(Math.trunc(6.1)); // 6
+console.log(Math.trunc(3.141592653589793)); // 3
+```
+
+### Math.abs()
+
+> La fonction Math.abs() retourne la valeur absolue d'un nombre
+
+```js
+console.log(Math.abs(420)); // 420
+console.log(Math.abs(-420)); // 420
+console.log(Math.abs(420.69)); // 420.69
+console.log(Math.abs(-420.69)); // 420.69
+```
+
+### Math.ceil()
+
+> La fonction Math.ceil() retourne le plus petit entier supérieur ou égal au nombre donné.
+
+```js
+console.log(Math.ceil(420)); // 420
+console.log(Math.ceil(-420)); // -420
+console.log(Math.ceil(420.69)); // 421
+console.log(Math.ceil(-420.69)); // -420
+```
+
+### Math.floor()
+
+> La fonction Math.floor(x) renvoie le plus grand entier qui est inférieur ou égal à un nombre x.
+
+```js
+console.log(Math.floor(420)); // 420
+console.log(Math.floor(-420)); // -420
+console.log(Math.floor(420.69)); // 420
+console.log(Math.floor(-420.69)); // -421
+```
+
+### Math.max(x,y,...)
+
+> La fonction Math.max() renvoie le plus grand nombre d'une série de 0 ou plusieurs nombres.
+
+```js
+console.log(Math.max(0, 1, 2, 3, 4)); // 4
+console.log(Math.max(0, -1, -2, -3, -4)); // 0
+console.log(Math.max(0, 69, 420, 69.69, 420.69)); // 420.69
+```
+
+### Math.min(x,y,...)
+
+> La fonction Math.min() renvoie le plus petit nombre d'une série de 0 ou plusieurs nombres.
+
+```js
+console.log(Math.min(0, 1, 2, 3, 4)); // 0
+console.log(Math.min(0, -1, -2, -3, -4)); // -4
+console.log(Math.min(0, 69, 420, 69.69, 420.69)); // 0
+```
+
+### Math.sqrt()
+
+> La fonction Math.sqrt() renvoie la racine carrée d'un nombre.
+
+```js
+console.log(Math.sqrt(25)); // 5
+console.log(Math.sqrt(64)); // 8
+console.log(Math.sqrt(69)); // 8.30662386
+console.log(Math.sqrt(-420.69)); // NaN
+```
