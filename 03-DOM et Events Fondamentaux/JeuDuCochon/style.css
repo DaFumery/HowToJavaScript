@@ -36,7 +36,11 @@ main {
   display: flex;
 }
 
-.player {
+.hidden {
+  display: none;
+}
+
+.joueur {
   flex: 50%;
   padding: 9rem;
   display: flex;
@@ -63,17 +67,17 @@ main {
   margin-bottom: auto;
 }
 
-.player--active {
+.joueur--active {
   background-color: rgba(255, 255, 255, 0.4);
 }
-.player--active .name {
+.joueur--active .name {
   font-weight: 700;
 }
-.player--active .score {
+.joueur--active .score {
   font-weight: 400;
 }
 
-.player--active .current {
+.joueur--active .current {
   opacity: 1;
 }
 
@@ -118,7 +122,7 @@ main {
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
 
-  padding: 0.7rem 2.5rem;
+  padding: 0.7rem 1.8rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
@@ -157,11 +161,11 @@ main {
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
-.player--winner {
+.joueur--winner {
   background-color: #2f2f2f;
 }
 
-.player--winner .name {
+.joueur--winner .name {
   font-weight: 700;
   color: #c7365f;
 }
