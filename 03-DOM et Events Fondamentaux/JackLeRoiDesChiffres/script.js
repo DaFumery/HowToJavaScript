@@ -45,9 +45,9 @@ document.querySelector('.verifier').addEventListener('click', function () {
   // VICTOIRE
   else if (deviner === randomNombre) {
     // Show RandomNombre, Update Message, BackgroundVert
-    document.querySelector('.randomNombre').textContent = randomNombre;
     displayMessage("(●'◡'●) Correcte !");
     backgroundVert();
+    document.querySelector('.randomNombre').textContent = randomNombre;
     document.querySelector('.randomNombre').style.width = '30rem';
 
     // Update Highscore
@@ -60,7 +60,7 @@ document.querySelector('.verifier').addEventListener('click', function () {
   else if (deviner !== randomNombre) {
     if (score > 1) {
       displayMessage(
-        deviner > secretNumber ? '📈 Trop haut !' : '📉 Trop bas !'
+        deviner > randomNombre ? '📈 Trop haut !' : '📉 Trop bas !'
       );
       // Désincrémente le score et update
       score--;
