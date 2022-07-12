@@ -118,14 +118,18 @@ JS Engine est un programme qui execute le code JS (V8 Engine).
 
 - Compilation
 
-  > Tout le code est converti en machine code et écrit en fichier binaire qui peut être exécuté par l'ordinateur
+  > Tout le code est converti en machine code et écrit en fichier binaire qui peut être exécuté par l'ordinateur.
 
 - Interpretation
 
-  > L'interpreter traverse le code source et l'exécute ligne par ligne
+  > L'interpreter traverse le code source et l'exécute ligne par ligne.
 
 - Just-in-Time (JIT) Compilation
 
   > Le code entier est converti en code machine en une seule fois, puis exécuté immédiatement.
 
 ![Compilation-Interpretation](img/interpreter-compiler.png)
+
+### Modern Just-in-Time Compilation
+
+![Modern Just-in-Time Compilation](img/Modern-JIT.png)
