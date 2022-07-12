@@ -12,6 +12,7 @@
   - [Dynamic](#dynamic)
   - [Single-threaded](#single-threaded)
   - [Non-blocking Event Loop](#non-blocking-event-loop)
+- [JavaScript Engine]()
 
 ## Qu'est ce que JavaScript?
 
@@ -106,3 +107,25 @@ Un prototype peut lui aussi avoir son prototype objet duquel il héritera des m�
 ### Non-blocking Event Loop
 
 ![Non-blocking Event Loop](img/Nonblockingevent.png)
+
+## JavaScript Engine
+
+JS Engine est un programme qui execute le code JS (V8 Engine).
+
+![JSEngine](img/JS-engine.png)
+
+### Compilation vs Interpretation
+
+- Compilation
+
+  > Tout le code est converti en machine code et écrit en fichier binaire qui peut être exécuté par l'ordinateur
+
+- Interpretation
+
+  > L'interpreter traverse le code source et l'exécute ligne par ligne
+
+- Just-in-Time (JIT) Compilation
+
+  > Le code entier est converti en code machine en une seule fois, puis exécuté immédiatement.
+
+![Compilation-Interpretation](img/interpreter-compiler.png)
