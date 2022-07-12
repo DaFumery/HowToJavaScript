@@ -2,16 +2,16 @@
 
 ## Table des matières
 
-- [Qu'est ce que JavaScript]()
-  - [High Level]()
-  - [Garbage-collected]()
-  - [Interpreted ou Just-in-Time Compiled]()
-  - [Multi-paradigm]()
-  - [Prototype-based / Object Oriented]()
-  - [First-class Functions]()
-  - [Dynamic]()
-  - [Single-threaded]()
-  - [Non-blocking Event Loop]()
+- [Qu'est ce que JavaScript](#quest-ce-que-javascript)
+  - [High Level](#high-level)
+  - [Garbage-collected](#garbage-collected)
+  - [Interpreted ou Just-in-Time Compiled](#interpreted-ou-just-in-time-compiled)
+  - [Multi-paradigm](#multi-paradigm)
+  - [Prototype-based / Object Oriented](#prototype-based--object-oriented)
+  - [First-class Functions](#first-class-functions)
+  - [Dynamic](#dynamic)
+  - [Single-threaded](#single-threaded)
+  - [Non-blocking Event Loop](#non-blocking-event-loop)
 
 ## Qu'est ce que JavaScript?
 
@@ -91,7 +91,7 @@ Un prototype peut lui aussi avoir son prototype objet duquel il héritera des m�
 
 ### Single-threaded
 
-**JavaScript est un langage en Single-Thread** (Unique coeur), il ne traite qu'une commande à la fois. L'opposé du Single-Thread est le multithreading.
+**JavaScript est un langage en Single-Thread** (Coeur unique), il ne traite qu'une commande à la fois. L'opposé du Single-Thread est le multithreading.
 
 **Il est également Asynchrone** c'est à dire qu'il utilise une technique qui permet au programme de démarrer une tâche à l'exécution potentiellement longue et, au lieu d'avoir à attendre la fin de la tâche, de pouvoir continuer à réagir aux autres évènements pendant l'exécution de cette tâche. Une fois la tâche terminée, le programme en reçoit le résultat.
 
