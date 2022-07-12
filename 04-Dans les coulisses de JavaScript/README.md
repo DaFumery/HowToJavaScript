@@ -75,7 +75,7 @@ On distingue **les langages Low-level et les High-Level**
 
 ### Prototype-based / Object Oriented
 
-JavaScript est souvent décrit comme un langage basé sur les prototypes, chaque objet pouvant avoir un prototype objet d'où il hérite des méthodes et des attributs.
+**JavaScript est souvent décrit comme un langage basé sur les prototypes**,chaque objet pouvant avoir un prototype objet d'où il hérite des méthodes et des attributs.
 
 Un prototype peut lui aussi avoir son prototype objet duquel il héritera des méthodes et des attributs et ainsi de suite. On parle alors de chaîne de prototypage
 
@@ -90,6 +90,18 @@ Un prototype peut lui aussi avoir son prototype objet duquel il héritera des m�
 ![Dynamic](img/dynamic.png)
 
 ### Single-threaded
+
+**JavaScript est un langage en Single-Thread** (Unique coeur), il ne traite qu'une commande à la fois. L'opposé du Single-Thread est le multithreading.
+
+**Il est également Asynchrone** c'est à dire qu'il utilise une technique qui permet au programme de démarrer une tâche à l'exécution potentiellement longue et, au lieu d'avoir à attendre la fin de la tâche, de pouvoir continuer à réagir aux autres évènements pendant l'exécution de cette tâche. Une fois la tâche terminée, le programme en reçoit le résultat.
+
+**- Avantages de l'approche Asynchrone**
+
+> Pas de limitation due au nombre de threads.
+> Pas de locks ou sémaphores.
+> Pas de locks gourmants.
+> Pas de deadlock.
+> Les données ne peuvent pas varier lors de l'exécution d'une fonction synchrone.
 
 ### Non-blocking Event Loop
 
