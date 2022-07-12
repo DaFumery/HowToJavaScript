@@ -59,6 +59,8 @@ On distingue **les langages Low-level et les High-Level**
 
 ### Multi-paradigm
 
+![MultiParadigm](img/multi-paradigm.png)
+
 ### Prototype-based / Object Oriented
 
 ### First-class Functions
