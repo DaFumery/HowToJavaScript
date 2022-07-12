@@ -3,64 +3,96 @@
 /////////////////////////////////////////////
 /////////////////////////////////////////////
 /// Variables
+let randomNombre = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
-
-// Génère un nombre aléatoire entre 0 et 20
-const randomNombre = Math.trunc(Math.random() * 20) + 1;
+let highscore = 0;
 
 /////////////////////////////////////////////
 /////////////////////////////////////////////
-/// Selectors
-document.querySelector('.nombre').textContent = randomNombre;
+/// Expression de function
+
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
+const backgroundOrange = function () {
+  document.querySelector('body').style.backgroundColor = '#ff7534';
+};
+const backgroundVert = function () {
+  document.querySelector('body').style.backgroundColor = '#60b347';
+};
+const scoreToZero = function () {
+  document.querySelector('.score').textContent = 0;
+};
+const updateScore = function () {
+  document.querySelector('.score').textContent = score;
+};
 
 /////////////////////////////////////////////
 /////////////////////////////////////////////
-/// Events
+/// Button Verifier
+
+// EventListerner 'click' sur bouton vérifier
 document.querySelector('.verifier').addEventListener('click', function () {
   const deviner = Number(document.querySelector('.deviner').value);
   console.log(deviner, typeof deviner);
 
-  // No input
+  // NO INPUT
   if (!deviner) {
-    document.querySelector('.message').textContent = 'Pas de nombre ❗';
+    displayMessage('Pas de nombre ❗');
+    // document.querySelector('.message').textContent = 'Pas de nombre ❗';
   }
 
-  // Situation de victoire
+  // VICTOIRE
   else if (deviner === randomNombre) {
-    document.querySelector('.message').textContent = "(●'◡'●) Correcte !";
-    document.querySelector('body').style.backgroundColor = '#60b347';
-    document.querySelector('.nombre').style.width = '30rem';
-  }
+    // Show RandomNombre, Update Message, BackgroundVert
+    document.querySelector('.randomNombre').textContent = randomNombre;
+    displayMessage("(●'◡'●) Correcte !");
+    backgroundVert();
+    document.querySelector('.randomNombre').style.width = '30rem';
 
-  // Situation de nombre trop haut
-  else if (deviner > randomNombre) {
+    // Update Highscore
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
+  }
+  // MAUVAIS NOMBRE
+  else if (deviner !== randomNombre) {
     if (score > 1) {
-      document.querySelector('.message').textContent = '📈 Trop haut !';
+      displayMessage(
+        deviner > secretNumber ? '📈 Trop haut !' : '📉 Trop bas !'
+      );
+      // Désincrémente le score et update
       score--;
-      document.querySelector('.score').textContent = score;
+      updateScore();
     }
-
-    // Situation de défaite
+    // DEFAITE
     else {
-      document.querySelector('.message').textContent = '🧨 Vous avez perdu';
-      document.querySelector('.score').textContent = 0;
-      document.querySelector('body').style.backgroundColor = '#60b347';
+      // Update Message, Score à 0 et BackgroundOrange
+      displayMessage('🧨 Vous avez perdu');
+      scoreToZero();
+      backgroundOrange();
     }
   }
+});
 
-  // Situation de nombre trop bas
-  else if (deviner < randomNombre) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '📉 Trop bas !';
-      score--;
-      document.querySelector('.score').textContent = score;
-    }
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+/// Button Reset
 
-    // Situation de défaite
-    else {
-      document.querySelector('.message').textContent = '🧨 Vous avez perdu';
-      document.querySelector('.score').textContent = 0;
-      document.querySelector('body').style.backgroundColor = '#60b347';
-    }
-  }
+// EventListerner 'click' sur bouton Reset
+document.querySelector('.reset').addEventListener('click', function () {
+  // Restaure les valeurs initiales des variables 'score' et 'randomNombre'
+  score = 20;
+  randomNombre = Math.trunc(Math.random() * 20) + 1;
+
+  // Restaure les conditions initiales du message, du randomNombre, du score et du devine input
+  displayMessage('Essayez de deviner');
+  updateScore();
+  document.querySelector('.randomNombre').textContent = '?';
+  document.querySelector('.deviner').value = ' ';
+
+  // Restaurer le body background color et le randomNombre width
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.randomNombre').style.width = '15rem';
 });
