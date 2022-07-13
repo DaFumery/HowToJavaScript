@@ -16,6 +16,10 @@
   - [Compilation vs Interpretation](#compilation-vs-interpretation)
   - [Modern Just-in-Time Compilation](#modern-just-in-time-compilation)
 - [JavaScript Runtime]()
+  - [JavaScript Runtime in Browser]()
+  - [JavaScript Runtime in Node.js]()
+- [Contexte d'exécution et Pile d'exécution]()
+  - [Définitions]()
 
 ## Qu'est ce que JavaScript?
 
@@ -148,3 +152,21 @@ Un environnement d'exécution ou runtime est un logiciel responsable de l'exécu
 ### JS Runtime in Node.js
 
 ![JS Runtime in Node.js](img/js-runtime-nodejs.png)
+
+## Contexte d'exécution et Pile d'exécution
+
+### Définitions
+
+- Contexte d'exécution
+
+> Un contexte d'exécution (en anglais, execution context) d'une tâche (processus, processus léger...) est constitué par l'ensemble des données utilisées par la tâche en question.C'est l'ensemble minimal de données à sauvegarder pour permettre une interruption de la tâche à un moment donné, et une reprise de cette exécution au point où elle a été interrompue, et, dans la mesure du possible, indépendamment de la date de la reprise du processus.
+
+- Pile d'exécution
+
+> La pile d’exécution (en anglais, call stack) est une structure de données de type pile qui sert à enregistrer des informations au sujet des fonctions actives dans un programme informatique. Une pile d'exécution est utilisée pour emmagasiner plusieurs valeurs, mais sa principale utilisation est de garder la trace de l'endroit où chaque fonction active doit retourner à la fin de son exécution (les fonctions actives sont celles qui ont été appelées, mais n’ont pas encore terminé leur exécution)
+
+### Le contexte d'exécution
+
+![Le contexte d'exécution](img/execution-context-presentation.png)
+
+![Le contexte d'exécution detail](img/execution-context-details.png.png)
