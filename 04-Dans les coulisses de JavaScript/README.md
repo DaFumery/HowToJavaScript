@@ -22,7 +22,7 @@
   - [Définitions](#définitions)
   - [Le contexte d'exécution](#le-contexte-dexécution)
   - [La pile d'exécution](#la-pile-dexécution)
-- [Scope & Scoping in JS (Concept)](#scope--scoping-in-js-concept)
+- [Scope & Scoping in JS](#scope--scoping-in-js)
   - [Concept](#concept)
   - [Les 3 types de Scope (Global, Fonction et Bloc)](#les-3-types-de-scope-global-fonction-et-bloc)
     - [Global Scope](#global-scope)
@@ -183,7 +183,7 @@ Un environnement d'exécution ou runtime est un logiciel responsable de l'exécu
 
 ![Le contexte d'exécution](img/the-call-stack.png)
 
-## Scope & Scoping in JS (Concept)
+## Scope & Scoping in JS
 
 ### Concept
 
