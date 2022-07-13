@@ -21,7 +21,13 @@
 - [Contexte d'exécution et Pile d'exécution]()
   - [Définitions](#définitions)
   - [Le contexte d'exécution](#le-contexte-dexécution)
-  - [La pile d'exécution]()
+  - [La pile d'exécution](#la-pile-dexécution)
+- [Scope & Scoping in JS (Concept)](#scope--scoping-in-js-concept)
+  - [Concept](#concept)
+  - [Les 3 types de Scope (Global, Fonction et Bloc)](#les-3-types-de-scope-global-fonction-et-bloc)
+    - [Global Scope](#global-scope)
+    - [Fonction Scope](#Fonction-Scope)
+    - [Block Scope](#block-scope)
 
 ## Qu'est ce que JavaScript?
 
@@ -176,3 +182,63 @@ Un environnement d'exécution ou runtime est un logiciel responsable de l'exécu
 ### La pile d'exécution
 
 ![Le contexte d'exécution](img/the-call-stack.png)
+
+## Scope & Scoping in JS (Concept)
+
+### Concept
+
+- 👉 **Scoping**: Comment les variables de notre programme sont **organisées** et **accessibles**. "Où les se trouvent les variables?" ou "Où pouvons-nous accéder à une certaine variable, et où pas ?"
+
+- 👉 **Lexical scoping**: La portée (Scope) est contrôlée par le **placement** des fonctions et des blocs dans le code ;
+
+- 👉 **Scope**: espace ou environnement dans lequel une certaine variable **est déclarée** (variable d'environnement en cas de fonctions). Il existe une **portée globale**, une **portée de fonction** et une **portée de bloc** ;
+
+- 👉 **Scope of a variable**: Région de notre code où une certaine variable est **accessible.**
+
+### Les 3 types de Scope (Global, Fonction et Block)
+
+#### Global Scope
+
+> 👉 En dehors de toute fonction ou bloc.
+
+> 👉 Variables déclarées en global portée sont **accessibles partout**.
+
+```js
+const me = "Mathys";
+const job = "Développeur";
+const year = 1997;
+```
+
+#### Fonction Scope
+
+> 👉 Les variables ne sont accessibles qu'**à l'intérieur de la fonction** pas à l'extérieur
+
+> 👉 Aussi appelé "**Local Scope**"
+
+```js
+function calcAge(anneeNaissance) {
+  const annee = 2022;
+  const age = annee - anneeNaissance;
+  return age;
+}
+
+console.log(annee); // ReferenceError
+```
+
+#### Block Scope
+
+> 👉 Les variables ne sont accessibles qu'à l'intérieur du bloc (**Block Scoped**)
+
+> 👉 Ne s'applique qu'aux variables déclarées par **let** et **const**
+
+> 👉 Les functions sont aussi Block Scoped (en strict mode)
+
+```js
+if (year >= 1969 && year <= 1997) {
+  const millenial = true;
+  let food = "Un avocat au surimi";
+}
+
+console.log(millenial); // ReferenceError
+console.log(food); // ReferenceError
+```
