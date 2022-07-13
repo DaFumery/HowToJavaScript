@@ -12,7 +12,10 @@
   - [Dynamic](#dynamic)
   - [Single-threaded](#single-threaded)
   - [Non-blocking Event Loop](#non-blocking-event-loop)
-- [JavaScript Engine]()
+- [JavaScript Engine](#javascript-engine)
+  - [Compilation vs Interpretation](#compilation-vs-interpretation)
+  - [Modern Just-in-Time Compilation](#modern-just-in-time-compilation)
+- [JavaScript Runtime]()
 
 ## Qu'est ce que JavaScript?
 
@@ -133,3 +136,15 @@ JS Engine est un programme qui execute le code JS (V8 Engine).
 ### Modern Just-in-Time Compilation
 
 ![Modern Just-in-Time Compilation](img/Modern-JIT.png)
+
+## JavaScript Runtime
+
+Un environnement d'exécution ou runtime est un logiciel responsable de l'exécution des programmes informatiques écrits dans un langage de programmation donné1. Un runtime offre des services d'exécution de programmes
+
+### JS Runtime in Browser
+
+![JS Runtime in Browser](img/js-runtime-browser.png)
+
+### JS Runtime in Node.js
+
+![JS Runtime in Node.js](img/js-runtime-nodejs.png)
