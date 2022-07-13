@@ -81,9 +81,9 @@ const toto = ["1", "2", "3", "4"];
 
 // en utilisant la décomposition
 const [un, , trois, quatre] = toto;
-console.log(un);
-console.log(trois);
-console.log(quatre);
+console.log(un); // 1
+console.log(trois); // 3
+console.log(quatre); // 4
 ```
 
 ### Affecter le reste d'un tableau à une variable
