@@ -265,3 +265,25 @@ console.log(food); // ReferenceError
   > Permet à certaines fonctions d'accéder à des morceaux de code dans lesquels elles sont écrites lexicalement
 
 ![Scope Chains vs CallStack](img/ScopeChains-Callstack.png)
+
+### En Résumé
+
+- 👉 Le Scoping pose la question "**Où se situent les variables ?**" ou "**Où pouvons-nous accéder à une certaine variable, et où pas ?**".
+
+- 👉 Il existe **3 types de Scope** en JavaScript : **Global Scope**, **Function Scope**, et **Block Scope**.
+
+- 👉 Seules les variables **let et const ont un Block Scope**.
+
+- 👉 Les variables déclarées avec **var se retrouvent dans la portée de fonction la plus proche**.
+
+- 👉 En JavaScript, nous avons une lexicale Scope, donc les règles d'accès aux variables sont basées sur exactement où dans le code les fonctions et les blocs de code sont écrits
+
+- 👉 Chaque scope a toujours accès à toutes les variables de tous ses scopes externes. C'est la chaîne de portée.
+
+- 👉 Lorsqu'une variable n'est pas dans **la Scope actuelle**, le moteur recherche dans **la Scope Chains **jusqu'à ce qu'il trouve la variable recherchée. C'est ce qu'on appelle **la recherche de variable**.
+
+- 👉 La Scope Chains est une voie à sens unique : un Scope n'aura jamais accès aux variables d'une portée interne.
+
+- 👉 La Scope Chains dans un certain Scope équivaut à additionner tous les environnements variables de toutes les portées parentes.
+
+- 👉 La Scope Chains n'a rien à voir avec l'ordre dans lequel les fonctions ont été appelées. Cela n'affecte en rien la Scope Chains.
