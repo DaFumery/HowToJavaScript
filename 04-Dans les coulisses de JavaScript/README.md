@@ -32,6 +32,11 @@
     - [Définition](#définition)
   - [Scope Chains vs CallStack](#scope-chains-vs-callstack)
   - [En résumé](#en-résumé)
+- [Le mot clé 'This'](#le-mot-clé-this)
+  - [Comment fonctionne 'This'](#comment-fonctionne-this)
+- [Primitives vs Objects](#primitives-vs-objects)
+  - [Primitives, Objects and the JavaScript Engine](#primitives-objects-and-the-javascript-engine)
+  - [Primitive vs Reference Values](#primitive-vs-reference-values)
 
 ## Qu'est ce que JavaScript?
 
@@ -291,3 +296,31 @@ console.log(food); // ReferenceError
 - 👉 La Scope Chains dans un certain Scope équivaut à additionner tous les environnements variables de toutes les portées parentes.
 
 - 👉 La Scope Chains n'a rien à voir avec l'ordre dans lequel les fonctions ont été appelées. Cela n'affecte en rien la Scope Chains.
+
+## Le mot clé 'This'
+
+### Comment fonctionne 'This'
+
+👉 **'This' mot-clé/variable** : Variable spéciale qui est créée pour chaque contexte d'exécution (chaque fonction). Prend la valeur de (pointe vers) le « propriétaire » de la fonction dans laquelle le mot-clé this est utilisé.
+
+☝ 'This' n'est PAS statique. Cela dépend de la façon dont la fonction est appelée et sa valeur n'est attribuée que lorsque le fonction est réellement appelée.
+
+👉 'This' ne pointe PAS vers la fonction elle-même, et PAS non plus vers sa variable d'environnement.
+
+```js
+Method 👉 this = <Object that is calling the method>
+Simple function call 👉 this = undefined
+Arrow functions 👉 this = <this of surrounding function (lexical this)>
+Event listener 👉 this = <DOM element that the handler is attached to>
+new, call, apply, bind 👉 <Later in the course... ⏳>
+```
+
+## Primitives vs Objects
+
+### Primitives, Objects and the JavaScript Engine
+
+![PRIMITIVES, OBJECTS AND THE JAVASCRIPT ENGINE](img/review-primitives-objects-engine.png)
+
+### Primitive vs Reference Values
+
+![Primitive vs Reference Values](img/primitive-references-values.png)
