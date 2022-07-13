@@ -28,6 +28,10 @@
     - [Global Scope](#global-scope)
     - [Fonction Scope](#Fonction-Scope)
     - [Block Scope](#block-scope)
+  - [Scope Chains](#scope-chains)
+    - [Définition](#définition)
+  - [Scope Chains vs CallStack](#scope-chains-vs-callstack)
+  - [En résumé](#en-résumé)
 
 ## Qu'est ce que JavaScript?
 
