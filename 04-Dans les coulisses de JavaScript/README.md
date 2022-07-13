@@ -15,11 +15,13 @@
 - [JavaScript Engine](#javascript-engine)
   - [Compilation vs Interpretation](#compilation-vs-interpretation)
   - [Modern Just-in-Time Compilation](#modern-just-in-time-compilation)
-- [JavaScript Runtime]()
-  - [JavaScript Runtime in Browser]()
-  - [JavaScript Runtime in Node.js]()
+- [JavaScript Runtime](#javascript-runtime)
+  - [JavaScript Runtime in Browser](#js-runtime-in-browser)
+  - [JavaScript Runtime in Node.js](#js-runtime-in-nodejs)
 - [Contexte d'exécution et Pile d'exécution]()
-  - [Définitions]()
+  - [Définitions](#définitions)
+  - [Le contexte d'exécution](#le-contexte-dexécution)
+  - [La pile d'exécution]()
 
 ## Qu'est ce que JavaScript?
 
@@ -169,4 +171,8 @@ Un environnement d'exécution ou runtime est un logiciel responsable de l'exécu
 
 ![Le contexte d'exécution](img/execution-context-presentation.png)
 
-![Le contexte d'exécution detail](img/execution-context-details.png.png)
+![Le contexte d'exécution detail](img/execution-context-details.png)
+
+### La pile d'exécution
+
+![Le contexte d'exécution](img/the-call-stack.png)
