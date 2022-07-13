@@ -242,3 +242,26 @@ if (year >= 1969 && year <= 1997) {
 console.log(millenial); // ReferenceError
 console.log(food); // ReferenceError
 ```
+
+### Scope Chains
+
+#### Définition
+
+- Scope Chains
+  > Lorsqu'une variable est utilisée en JavaScript, le moteur JavaScript essaie de trouver la valeur de la variable dans la portée actuelle. S'il n'a pas pu trouver la variable, il examinera la portée externe et continuera à le faire jusqu'à ce qu'il trouve la variable ou atteigne la portée globale.
+
+![Scope Chains](img/ScopeChains.png)
+
+### Scope Chains vs CallStack
+
+- **CallStack**
+
+  > le code s'exécute dans l'ordre dans lequel les fonctions sont appelées.
+  > Exécute les variables et les fonctions dans l'ordre dans lequel elles sont appelées.
+
+- **Scope Chains**
+
+  > Le code s'exécute dans l'ordre dans lequel les fonctions sont écrites lexicalement
+  > Permet à certaines fonctions d'accéder à des morceaux de code dans lesquels elles sont écrites lexicalement
+
+![Scope Chains vs CallStack](img/ScopeChains-Callstack.png)
