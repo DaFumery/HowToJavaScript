@@ -11,7 +11,9 @@
   - [Echange de variables](#echange-de-variables)
   - [Ignorer certaines valeurs](#ignorer-certaines-valeurs)
   - [Affecter le reste d'un tableau à une variable](#affecter-le-reste-dun-tableau-à-une-variable)
-- [Destructuring : Objects]()
+  - [Destructuring un tableau d'un tableau](#destructuring-un-tableau-dun-tableau)
+- [Destructuring : Objects](#destructuring--objects)
+  - [Function Destructuring](#function-destructuring)
 
 ## Affecter par décomposition
 
@@ -94,4 +96,37 @@ On peut également utiliser la décomposition d'un tableau afin d'en affecter un
 const [a, ...b] = [1, 2, 3];
 console.log(a); // 1
 console.log(b); // [2, 3]
+```
+
+### Destructuring un tableau d'un tableau
+
+```js
+const nested = [2, 4, [5, 6]];
+
+const [i, , [j, k]] = nested;
+console.log(i, j, k); // 2, 5, 6
+```
+
+## Destructuring : Objects
+
+### Function Destructuring
+
+```js
+const restaurant = {
+  nom: "Ici on bouffe d'la marde",
+  adresse: "Via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italien", "Pizzeria", "Vegetarien", "Biologique"],
+  entrees: ["Focaccia", "Bruschetta", "Pain à l'ail", "Salade Niçoise"],
+  plats: ["Pizza", "Pâtes au pesto", "Risotto"],
+
+  // Function de destructuring
+  order: function (entreesIndex, platsIndex) {
+    return [this.entrees[entreesIndex], this.plats[platsIndex]];
+  },
+};
+
+console.log(restaurant.order(2, 0)); // ['Pain à l'ail', 'Pizza']
+
+const [entrees, plats] = restaurant.order(0, 1);
+console.log(entrees, plats); // 'Focaccia', Pates au pesto
 ```
